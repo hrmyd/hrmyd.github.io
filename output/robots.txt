@@ -1,0 +1,4 @@
+Sitemap: https://hrmyd.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: hrmyd.github.io
