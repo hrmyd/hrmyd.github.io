@@ -1,3 +1,4 @@
+.. title: Japan 2018
 .. slug: index
 .. date: 2018-07-03 
 .. tags: 
