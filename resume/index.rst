@@ -1,6 +1,6 @@
-.. title: Welcome!
-.. slug: index
-.. date: 2018-07-03 10:30:24 UTC-07:00
+.. title: Resume/CV
+.. slug: resume
+.. date: 2018-07-03 10:42:11 UTC-07:00
 .. tags: 
 .. category: 
 .. link: 
