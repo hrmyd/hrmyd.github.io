@@ -570,7 +570,7 @@ img#logo {
 /* social media links */
 .socialmedia {
   float: left;
-  padding: 20px;
+  margin: 20px;
 }
 
 .small_links {
