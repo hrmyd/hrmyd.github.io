@@ -567,6 +567,11 @@ img#logo {
   width: 200px;
 }
 
+/* image fix */
+.overflow {
+  display: inline-block;
+}
+
 /* Sidebar links */
 div.hsidebar a, .hsidebar a {
   color: #fff;
