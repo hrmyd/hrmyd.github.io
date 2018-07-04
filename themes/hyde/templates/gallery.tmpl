@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html><body><p>
+<%doc>
 Template used for image galleries.
 
 If ``folders`` contains items then this is a listing of galleries or is a gallery
@@ -19,20 +18,21 @@ Interesting variables include:
     * title: The title of the image.
     * size: A dict containing w and h, the real size of the thumbnail.
 
-%doc&gt;
+</%doc>
 
-
-
+<%inherit file="/base.tmpl"/>
+<%block name="page_title">
   ## galleries is the default title for the listing of galleries
   % if title != 'galleries':
     ${title}
   % elif folders:
     Photo Galleries
   % endif
-%block&gt;
+</%block>
 
 % if post:
-  <article class="post_body"><div>
+  <article class="post_body">
+    <div>
       ${post.text()}
     </div>
   </article>
@@ -51,26 +51,35 @@ Interesting variables include:
       % for link, text in folders:
         <li class="">
           <h3 class="post-list_title">
-            <a class="" href="%24%7Blink%7D">${text|h}</a>
+            <a class="" href="${link}">${text|h}</a>
           </h3>
         </li>
       % endfor
-    </ul></article>
+    </ul>
+  </article>
 % endif
 
 
-<article class="gallery_body"><div class="gallery_container">
+<article class="gallery_body">
+  <div class="gallery_container">
     % if photo_array:
       % for image in photo_array:
-         image['size']['w'] else ''
-        %&gt;
+        <%
+          link = image['url']
+          title = image['title']
+          thumb_link = image['url_thumb']
+          # Add the narrow class to figures in portrait
+          extra_class = 'gallery_figure--narrow' if image['size']['h'] > image['size']['w'] else ''
+        %>
 
-        <figure class="gallery_figure ${extra_class}"><a href="%24%7Blink%7D" class="gallery_link image-reference" title="${title}">
-            <img class="gallery_image" src="%24%7Bthumb_link%7D" alt="${title}" title="${title}"></a>
+        <figure class="gallery_figure ${extra_class}">
+          <a href="${link}" class="gallery_link image-reference" title="${title}">
+            <img class="gallery_image" src="${thumb_link}" alt="${title}" title="${title}"/>
+          </a>
         </figure>
 
       % endfor
     % endif
   </div>
 
-</article></p></body></html>
+</article>

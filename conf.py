@@ -138,7 +138,7 @@ NAVIGATION_LINKS = {
         ("/about/", "About"),
         ("/resume/", "Resume"),
         ("/projects/", "Projects"),
-        ("/galleries/", "Photos"),
+        ("/galleries/", "Photography"),
         ("/blog/", "Blog"),
     ),
 }
