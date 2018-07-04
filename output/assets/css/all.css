@@ -572,10 +572,21 @@ img#logo {
   display: inline-block;
 }
 
+/* social media links */
+
 .socialmedia{
   display: block;
   width: 32px;
   height: 32px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
 }
 
 /* Sidebar links */
