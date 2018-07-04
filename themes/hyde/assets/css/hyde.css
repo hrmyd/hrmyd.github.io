@@ -93,12 +93,17 @@ img#logo {
 /* social media links */
 .socialmedia {
   float: left;
-  margin: 5px;
+  margin: 15px;
 }
 
 .small_links {
+  display: block;
   width: 32px;
   height: 32x;
+}
+
+.media_box {
+  padding: 20px 10px;
 }
 
 /* Sidebar links */
