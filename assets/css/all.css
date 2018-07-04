@@ -575,10 +575,11 @@ img#logo {
 /* social media links */
 .socialmedia {
   float: left;
+  margin: 5px;
 }
 
 .small_links {
-  display: inline;
+  display: inline-block;
   width: 32px;
   height: 32x;
 }
