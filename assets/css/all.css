@@ -572,6 +572,12 @@ img#logo {
   display: inline-block;
 }
 
+.socialmedia{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
 /* Sidebar links */
 div.hsidebar a, .hsidebar a {
   color: #fff;
