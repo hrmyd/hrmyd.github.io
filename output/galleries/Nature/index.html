@@ -1,76 +1,72 @@
 <!DOCTYPE html>
-<html><body><p>
-Template used for image galleries.
-
-If ``folders`` contains items then this is a listing of galleries or is a gallery
-which contains sub-galleries.
-
-Interesting variables include:
-
-* post: A post object, containing descriptive post.text() for the gallery.
-* crumbs: A list of link, crumb to implement breadcrumbs.
-* folders: A list of folders to implement hierarchical gallery navigation.
-* enable_comments: To enable/disable comments in galleries.
-* thumbnail_size: The THUMBNAIL_SIZE option.
-* photo_array: a list of dictionaries, each containing:
-
-    * url: URL for the full-sized image.
-    * url_thumb: URL for the thumbnail.
-    * title: The title of the image.
-    * size: A dict containing w and h, the real size of the thumbnail.
-
-%doc&gt;
+<html><body>
+<p>## -*- coding: utf-8 -*-
 
 
 
-  ## galleries is the default title for the listing of galleries
-  % if title != 'galleries':
-    ${title}
-  % elif folders:
-    Photo Galleries
-  % endif
 %block&gt;
 
-% if post:
-  <article class="post_body"><div>
-      ${post.text()}
-    </div>
-  </article>
-% endif
+
+    ${ui.breadcrumbs(crumbs)}
+    %if title:
+    </p>
+<h1>${title|h}</h1>
+    %endif
+    %if post:
+    <p>
+        ${post.text()}
+    </p>
+    %endif
+    %if folders:
+    <ul>
+    % for folder, ftitle in folders:
+        <li><a href="%24%7Bfolder%7D"><i class="icon-folder-open"></i> ${ftitle|h}</a></li>
+    % endfor
+    </ul>
+    %endif
+
+<div id="gallery_container"></div>
+%if photo_array:
+<noscript>
+<ul class="thumbnails">
+    %for image in photo_array:
+        <li>
+<a href="%24%7Bimage%5B'url'%5D%7D" class="thumbnail image-reference" title="${image['title']|h}">
+            <img src="%24%7Bimage%5B'url_thumb'%5D%7D" alt="${image['title']|h}"></a>
+    %endfor
+</li>
+</ul>
+</noscript>
+%endif
+%if site_has_comments and enable_comments:
+    ${comments.comment_form(None, permalink, title)}
+%endif
+%block&gt;
 
 
-% if folders:
-  <article class="post-group_body">
+${parent.extra_head()}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<style type="text/css">
+    #gallery_container {
+        position: relative;
+    }
+    .image-block {
+        position: absolute;
+    }
+</style>
+%if len(translations) &gt; 1:
+    %for langname in translations.keys():
+         %if langname != lang:
+             <link rel="alternate" hreflang="${langname}" href="%24%7B_link('gallery',%20gallery_path,%20langname)%7D">
+         %endif
+    %endfor
+%endif
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">%block&gt;
 
-    % if photo_array:
-      ## This gallery contains sub-galleries.
-      <h3>Sub-Galleries:</h3>
-    % endif
 
-    <ul class="post-list">
-      % for link, text in folders:
-        <li class="">
-          <h3 class="post-list_title">
-            <a class="" href="%24%7Blink%7D">${text|h}</a>
-          </h3>
-        </li>
-      % endfor
-    </ul></article>
-% endif
-
-
-<article class="gallery_body"><div class="gallery_container">
-    % if photo_array:
-      % for image in photo_array:
-         image['size']['w'] else ''
-        %&gt;
-
-        <figure class="gallery_figure ${extra_class}"><a href="%24%7Blink%7D" class="gallery_link image-reference" title="${title}">
-            <img class="gallery_image" src="%24%7Bthumb_link%7D" alt="${title}" title="${title}"></a>
-        </figure>
-
-      % endfor
-    % endif
-  </div>
-
-</article></p></body></html>
+<script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
+var jsonContent = ${photo_array_json};
+var thumbnailSize = ${thumbnail_size};
+renderGallery(jsonContent, thumbnailSize);
+window.addEventListener('resize', renderGallery);
+</script>%block&gt;</body></html>
