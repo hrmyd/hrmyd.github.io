@@ -7,4 +7,4 @@
 .. description: 
 .. type: text
 
-Photos from March/April 2018 Japan trip. Shot on Canon AE-1 with 35mm f/2.
+Photos from March/April 2018 Japan trip (Tokyo, Osaka, Kyoto). Shot on Canon AE-1 with 35mm f/2.
