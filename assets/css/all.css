@@ -578,7 +578,7 @@ img#logo {
 }
 
 .small_links {
-  display: block;
+  display: inline;
   width: 32px;
   height: 32x;
 }
