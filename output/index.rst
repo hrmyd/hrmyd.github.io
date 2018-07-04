@@ -10,7 +10,6 @@
 
  |linkedin| |twitter| |instagram|
 
-
 .. |linkedin| image:: /images/linkedin.png
    :target: https://www.linkedin.com/in/hrnmy/
 .. |twitter| image:: /images/twitter.png
