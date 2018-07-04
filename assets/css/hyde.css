@@ -91,20 +91,18 @@ img#logo {
 }
 
 /* social media links */
-
-.socialmedia{
-  display: block;
-  width: 32px;
-  height: 32px;
+.socialmedia {
+    text-align : center;
 }
 
-.row {
-  display: flex;
+.socialmedia img {
+    width  : 32px;
+    height : 32x;
 }
 
-.column {
-  flex: 25%;
-  padding: 5px;
+.socialmedia a {
+  width  : 32px;
+  height : 32x;
 }
 
 /* Sidebar links */
