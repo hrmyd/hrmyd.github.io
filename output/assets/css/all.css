@@ -574,7 +574,8 @@ img#logo {
 
 /* social media links */
 .socialmedia {
-  float: left
+  float: left;
+  margin: 5px;
 }
 
 .small_links {
