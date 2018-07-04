@@ -8,7 +8,7 @@
 .. type: text
 
 
- |linkedin||twitter||instagram|
+ |linkedin| |twitter| |instagram|
 
 
 .. |linkedin| image:: /images/linkedin.png
