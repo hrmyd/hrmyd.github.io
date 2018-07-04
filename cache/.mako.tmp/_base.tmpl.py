@@ -5,35 +5,35 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.58413
+_modified_time = 1530672731.967145
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/_base.tmpl'
 _template_uri = '/_base.tmpl'
 _source_encoding = 'ascii'
-_exports = ['extra_links', 'page_title', 'subtitle', 'extra_scripts']
+_exports = ['page_title', 'extra_scripts', 'extra_links', 'subtitle']
 
 
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        blog_header_image = context.get('blog_header_image', UNDEFINED)
         body_end = context.get('body_end', UNDEFINED)
-        blog_title = context.get('blog_title', UNDEFINED)
-        template_hooks = context.get('template_hooks', UNDEFINED)
-        def extra_links():
-            return render_extra_links(context._locals(__M_locals))
-        def page_title():
-            return render_page_title(context._locals(__M_locals))
         def subtitle():
             return render_subtitle(context._locals(__M_locals))
+        next = context.get('next', UNDEFINED)
+        extra_head_data = context.get('extra_head_data', UNDEFINED)
+        blog_title = context.get('blog_title', UNDEFINED)
+        capture = context.get('capture', UNDEFINED)
+        def page_title():
+            return render_page_title(context._locals(__M_locals))
+        template_hooks = context.get('template_hooks', UNDEFINED)
+        blog_header_image = context.get('blog_header_image', UNDEFINED)
         def extra_scripts():
             return render_extra_scripts(context._locals(__M_locals))
-        capture = context.get('capture', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         hasattr = context.get('hasattr', UNDEFINED)
-        extra_head_data = context.get('extra_head_data', UNDEFINED)
-        next = context.get('next', UNDEFINED)
+        def extra_links():
+            return render_extra_links(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n    <meta http-equiv="x-ua-compatible" content="ie=edge">\n    <title>\n')
         __M_writer('      ')
@@ -142,33 +142,11 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_extra_links(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def extra_links():
-            return render_extra_links(context)
-        __M_writer = context.writer()
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_page_title(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         def page_title():
             return render_page_title(context)
-        __M_writer = context.writer()
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_subtitle(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def subtitle():
-            return render_subtitle(context)
         __M_writer = context.writer()
         return ''
     finally:
@@ -186,8 +164,30 @@ def render_extra_scripts(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_extra_links(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def extra_links():
+            return render_extra_links(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_subtitle(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def subtitle():
+            return render_subtitle(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/_base.tmpl", "source_encoding": "ascii", "uri": "/_base.tmpl", "line_map": {"128": 78, "129": 78, "130": 80, "131": 80, "132": 85, "133": 85, "134": 89, "135": 89, "136": 93, "137": 93, "138": 94, "139": 94, "16": 0, "145": 13, "156": 9, "167": 51, "38": 1, "39": 9, "40": 9, "45": 9, "46": 12, "47": 12, "189": 178, "178": 16, "52": 13, "53": 15, "54": 15, "59": 16, "60": 18, "61": 18, "62": 19, "63": 19, "64": 23, "65": 23, "66": 29, "67": 29, "71": 29, "72": 30, "73": 32, "74": 32, "78": 32, "79": 34, "80": 38, "81": 39, "82": 39, "86": 39, "87": 41, "88": 43, "89": 44, "90": 46, "91": 46, "92": 49, "93": 50, "94": 50, "95": 50, "96": 50, "97": 51, "98": 51, "103": 51, "104": 52, "105": 52, "106": 59, "107": 60, "108": 60, "109": 62, "110": 62, "111": 62, "112": 62, "113": 63, "114": 63, "115": 63, "116": 63, "117": 64, "118": 64, "119": 69, "120": 71, "121": 73, "122": 74, "123": 74, "124": 75, "125": 75, "126": 77, "127": 77}}
+{"filename": "themes/yesplease/templates/_base.tmpl", "line_map": {"128": 78, "129": 78, "130": 80, "131": 80, "132": 85, "133": 85, "134": 89, "135": 89, "136": 93, "137": 93, "138": 94, "139": 94, "16": 0, "145": 9, "156": 16, "167": 13, "38": 1, "39": 9, "40": 9, "45": 9, "46": 12, "47": 12, "189": 178, "178": 51, "52": 13, "53": 15, "54": 15, "59": 16, "60": 18, "61": 18, "62": 19, "63": 19, "64": 23, "65": 23, "66": 29, "67": 29, "71": 29, "72": 30, "73": 32, "74": 32, "78": 32, "79": 34, "80": 38, "81": 39, "82": 39, "86": 39, "87": 41, "88": 43, "89": 44, "90": 46, "91": 46, "92": 49, "93": 50, "94": 50, "95": 50, "96": 50, "97": 51, "98": 51, "103": 51, "104": 52, "105": 52, "106": 59, "107": 60, "108": 60, "109": 62, "110": 62, "111": 62, "112": 62, "113": 63, "114": 63, "115": 63, "116": 63, "117": 64, "118": 64, "119": 69, "120": 71, "121": 73, "122": 74, "123": 74, "124": 75, "125": 75, "126": 77, "127": 77}, "source_encoding": "ascii", "uri": "/_base.tmpl"}
 __M_END_METADATA
 """

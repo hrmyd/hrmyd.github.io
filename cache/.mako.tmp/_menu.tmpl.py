@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.619441
+_modified_time = 1530672731.99395
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/_menu.tmpl'
 _template_uri = '_menu.tmpl'
@@ -17,9 +17,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        blog_title = context.get('blog_title', UNDEFINED)
         template_hooks = context.get('template_hooks', UNDEFINED)
         navigation_links = context.get('navigation_links', UNDEFINED)
-        blog_title = context.get('blog_title', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('<a href="#menu" id="menuLink" class="menu-link">\n')
@@ -43,6 +43,6 @@ def render_body(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/_menu.tmpl", "source_encoding": "ascii", "uri": "_menu.tmpl", "line_map": {"32": 16, "33": 16, "34": 16, "35": 19, "36": 21, "37": 22, "38": 22, "44": 38, "16": 0, "25": 2, "26": 4, "27": 9, "28": 9, "29": 14, "30": 15, "31": 16}}
+{"filename": "themes/yesplease/templates/_menu.tmpl", "line_map": {"32": 16, "33": 16, "34": 16, "35": 19, "36": 21, "37": 22, "38": 22, "44": 38, "16": 0, "25": 2, "26": 4, "27": 9, "28": 9, "29": 14, "30": 15, "31": 16}, "source_encoding": "ascii", "uri": "_menu.tmpl"}
 __M_END_METADATA
 """

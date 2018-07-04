@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.726134
+_modified_time = 1530672732.141989
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/tags.tmpl'
 _template_uri = 'tags.tmpl'
@@ -29,14 +29,14 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         range = context.get('range', UNDEFINED)
-        items = context.get('items', UNDEFINED)
-        cat_hierarchy = context.get('cat_hierarchy', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        hidden_tags = context.get('hidden_tags', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         cat_items = context.get('cat_items', UNDEFINED)
-        len = context.get('len', UNDEFINED)
+        cat_hierarchy = context.get('cat_hierarchy', UNDEFINED)
+        items = context.get('items', UNDEFINED)
+        hidden_tags = context.get('hidden_tags', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         __M_writer('\n\n')
@@ -97,6 +97,6 @@ def render_page_title(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/tags.tmpl", "source_encoding": "ascii", "uri": "tags.tmpl", "line_map": {"64": 34, "65": 37, "66": 40, "67": 41, "68": 42, "69": 46, "70": 47, "71": 48, "72": 50, "73": 50, "74": 50, "75": 50, "76": 55, "77": 58, "83": 7, "90": 7, "27": 0, "92": 8, "98": 92, "91": 8, "41": 3, "42": 5, "47": 9, "48": 14, "49": 15, "50": 17, "51": 18, "52": 19, "53": 21, "54": 24, "55": 24, "56": 24, "57": 24, "58": 27, "59": 28, "60": 30, "61": 31, "62": 32, "63": 33}}
+{"filename": "themes/yesplease/templates/tags.tmpl", "line_map": {"64": 34, "65": 37, "66": 40, "67": 41, "68": 42, "69": 46, "70": 47, "71": 48, "72": 50, "73": 50, "74": 50, "75": 50, "76": 55, "77": 58, "83": 7, "90": 7, "27": 0, "92": 8, "98": 92, "91": 8, "41": 3, "42": 5, "47": 9, "48": 14, "49": 15, "50": 17, "51": 18, "52": 19, "53": 21, "54": 24, "55": 24, "56": 24, "57": 24, "58": 27, "59": 28, "60": 30, "61": 31, "62": 32, "63": 33}, "source_encoding": "ascii", "uri": "tags.tmpl"}
 __M_END_METADATA
 """

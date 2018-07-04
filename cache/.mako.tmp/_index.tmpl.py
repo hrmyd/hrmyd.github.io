@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.639155
+_modified_time = 1530672732.06204
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/_index.tmpl'
 _template_uri = '_index.tmpl'
@@ -26,11 +26,11 @@ def _mako_generate_namespaces(context):
 def render_body(context,include_content=True,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        __M_locals = __M_dict_builtin(pageargs=pageargs,include_content=include_content)
-        comp = _mako_get_namespace(context, 'comp')
+        __M_locals = __M_dict_builtin(include_content=include_content,pageargs=pageargs)
+        index_teasers = context.get('index_teasers', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
         exclude_index_content = context.get('exclude_index_content', UNDEFINED)
-        index_teasers = context.get('index_teasers', UNDEFINED)
+        comp = _mako_get_namespace(context, 'comp')
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -67,6 +67,6 @@ def render_body(context,include_content=True,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/_index.tmpl", "source_encoding": "ascii", "uri": "_index.tmpl", "line_map": {"68": 62, "23": 6, "26": 5, "35": 4, "36": 5, "37": 6, "38": 9, "39": 10, "40": 14, "41": 14, "42": 16, "43": 16, "44": 21, "45": 22, "46": 23, "47": 23, "48": 23, "49": 25, "50": 29, "51": 35, "52": 35, "53": 36, "54": 36, "55": 40, "56": 40, "57": 42, "58": 43, "59": 44, "60": 44, "61": 47, "62": 50}}
+{"filename": "themes/yesplease/templates/_index.tmpl", "line_map": {"68": 62, "23": 6, "26": 5, "35": 4, "36": 5, "37": 6, "38": 9, "39": 10, "40": 14, "41": 14, "42": 16, "43": 16, "44": 21, "45": 22, "46": 23, "47": 23, "48": 23, "49": 25, "50": 29, "51": 35, "52": 35, "53": 36, "54": 36, "55": 40, "56": 40, "57": 42, "58": 43, "59": 44, "60": 44, "61": 47, "62": 50}, "source_encoding": "ascii", "uri": "_index.tmpl"}
 __M_END_METADATA
 """

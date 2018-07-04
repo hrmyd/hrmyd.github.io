@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.631382
+_modified_time = 1530672732.084534
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/list_post.tmpl'
 _template_uri = 'list_post.tmpl'
@@ -28,9 +28,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        title = context.get('title', UNDEFINED)
         def page_title():
             return render_page_title(context._locals(__M_locals))
+        title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -48,9 +48,9 @@ def render_body(context,**pageargs):
 def render_page_title(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        title = context.get('title', UNDEFINED)
         def page_title():
             return render_page_title(context)
+        title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer(str(title))
         return ''
@@ -60,6 +60,6 @@ def render_page_title(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/list_post.tmpl", "source_encoding": "ascii", "uri": "list_post.tmpl", "line_map": {"48": 7, "35": 5, "36": 6, "55": 7, "41": 7, "42": 9, "27": 0, "61": 55}}
+{"filename": "themes/yesplease/templates/list_post.tmpl", "line_map": {"48": 7, "35": 5, "36": 6, "55": 7, "41": 7, "42": 9, "27": 0, "61": 55}, "source_encoding": "ascii", "uri": "list_post.tmpl"}
 __M_END_METADATA
 """

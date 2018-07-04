@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.752623
+_modified_time = 1530672732.016735
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/post.tmpl'
 _template_uri = '/post.tmpl'
@@ -86,9 +86,9 @@ def render_subtitle(context,**pageargs):
 def render_header_image(context):
     __M_caller = context.caller_stack._push_frame()
     try:
+        post = context.get('post', UNDEFINED)
         default_header_image = context.get('default_header_image', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if post.meta[lang].get('header-image'):
@@ -106,6 +106,6 @@ def render_header_image(context):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/post.tmpl", "source_encoding": "ascii", "uri": "/post.tmpl", "line_map": {"67": 8, "73": 9, "80": 9, "86": 10, "23": 5, "93": 10, "94": 13, "95": 14, "96": 14, "97": 14, "98": 15, "99": 18, "100": 18, "101": 18, "39": 3, "40": 5, "41": 6, "107": 101, "46": 8, "29": 0, "51": 9, "52": 20, "53": 25, "54": 25, "60": 8}}
+{"filename": "themes/yesplease/templates/post.tmpl", "line_map": {"67": 8, "73": 9, "80": 9, "86": 10, "23": 5, "93": 10, "94": 13, "95": 14, "96": 14, "97": 14, "98": 15, "99": 18, "100": 18, "101": 18, "39": 3, "40": 5, "41": 6, "107": 101, "46": 8, "29": 0, "51": 9, "52": 20, "53": 25, "54": 25, "60": 8}, "source_encoding": "ascii", "uri": "/post.tmpl"}
 __M_END_METADATA
 """

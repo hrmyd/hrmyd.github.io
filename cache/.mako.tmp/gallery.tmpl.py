@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.800003
+_modified_time = 1530672731.94528
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/gallery.tmpl'
 _template_uri = 'gallery.tmpl'
@@ -30,9 +30,9 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def page_title():
             return render_page_title(context._locals(__M_locals))
-        post = context.get('post', UNDEFINED)
-        photo_array = context.get('photo_array', UNDEFINED)
         folders = context.get('folders', UNDEFINED)
+        photo_array = context.get('photo_array', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         __M_writer('\n')
@@ -71,7 +71,7 @@ def render_body(context,**pageargs):
                         
                 
                 __M_locals_builtin_stored = __M_locals_builtin()
-                __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['thumb_link','title','link','extra_class'] if __M_key in __M_locals_builtin_stored]))
+                __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['title','link','thumb_link','extra_class'] if __M_key in __M_locals_builtin_stored]))
                 __M_writer('\n\n        <figure class="yp-gallery__figure ')
                 __M_writer(str(extra_class))
                 __M_writer('">\n          <a href="')
@@ -94,9 +94,9 @@ def render_body(context,**pageargs):
 def render_page_title(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        title = context.get('title', UNDEFINED)
         def page_title():
             return render_page_title(context)
+        title = context.get('title', UNDEFINED)
         folders = context.get('folders', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -113,6 +113,6 @@ def render_page_title(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/gallery.tmpl", "source_encoding": "ascii", "uri": "gallery.tmpl", "line_map": {"27": 0, "37": 21, "38": 23, "43": 31, "44": 33, "45": 34, "46": 36, "47": 36, "48": 40, "49": 42, "50": 43, "51": 45, "52": 47, "53": 49, "54": 51, "55": 52, "56": 54, "57": 54, "58": 54, "59": 54, "60": 58, "61": 61, "62": 65, "63": 66, "64": 67, "65": 67, "75": 73, "76": 75, "77": 75, "78": 76, "79": 76, "80": 76, "81": 76, "82": 77, "83": 77, "84": 77, "85": 77, "86": 77, "87": 77, "88": 83, "94": 24, "102": 24, "103": 26, "104": 27, "105": 27, "106": 27, "107": 28, "108": 29, "114": 108}}
+{"filename": "themes/yesplease/templates/gallery.tmpl", "line_map": {"27": 0, "37": 21, "38": 23, "43": 31, "44": 33, "45": 34, "46": 36, "47": 36, "48": 40, "49": 42, "50": 43, "51": 45, "52": 47, "53": 49, "54": 51, "55": 52, "56": 54, "57": 54, "58": 54, "59": 54, "60": 58, "61": 61, "62": 65, "63": 66, "64": 67, "65": 67, "75": 73, "76": 75, "77": 75, "78": 76, "79": 76, "80": 76, "81": 76, "82": 77, "83": 77, "84": 77, "85": 77, "86": 77, "87": 77, "88": 83, "94": 24, "102": 24, "103": 26, "104": 27, "105": 27, "106": 27, "107": 28, "108": 29, "114": 108}, "source_encoding": "ascii", "uri": "gallery.tmpl"}
 __M_END_METADATA
 """

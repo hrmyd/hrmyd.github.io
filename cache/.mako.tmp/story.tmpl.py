@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1530670625.747889
+_modified_time = 1530672732.011965
 _enable_loop = True
 _template_filename = 'themes/yesplease/templates/story.tmpl'
 _template_uri = 'story.tmpl'
@@ -37,6 +37,6 @@ def render_body(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/yesplease/templates/story.tmpl", "source_encoding": "ascii", "uri": "story.tmpl", "line_map": {"32": 4, "27": 0, "38": 32}}
+{"filename": "themes/yesplease/templates/story.tmpl", "line_map": {"32": 4, "27": 0, "38": 32}, "source_encoding": "ascii", "uri": "story.tmpl"}
 __M_END_METADATA
 """
