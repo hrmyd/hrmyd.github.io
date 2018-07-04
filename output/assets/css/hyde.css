@@ -95,14 +95,10 @@ img#logo {
     text-align : center;
 }
 
-.socialmedia img {
-    width  : 32px;
-    height : 32x;
-}
-
 .small_links {
-  width  : 32px;
-  height : 32x;
+  display: block;
+  width: 32px;
+  height: 32x;
 }
 
 /* Sidebar links */
