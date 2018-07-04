@@ -143,6 +143,15 @@ NAVIGATION_LINKS = {
     ),
 }
 
+SOCIAL_MEDIA_LINKS = {
+    DEFAULT_LANG: (
+        ("https://www.linkedin.com/in/hrnmy/", "LinkedIn", "/images/linkedin.png"),
+        ("https://github.com/hrmyd/", "Github", "/images/github.png"),
+        ("https://twitter.com/hduvvuri8", "Twitter", "/images/twitter.png"),
+        ("https://www.instagram.com/hrnmy/", "Instagram", "/images/instagram.png"),
+    ),
+}
+
 # Name of the theme to use.
 THEME = "hyde"
 

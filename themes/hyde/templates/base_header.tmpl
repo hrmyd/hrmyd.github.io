@@ -47,6 +47,14 @@
     </nav>
 {% endmacro %}
 
+{% macro html_social_media_links() %}
+    <div>
+    {% for url, text, img in social_media_links[lang] %}
+        <a class="sidebar-nav-item" href="{{url}}" alt="{{text}}"><img src="{{img}}"</a>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
 {% macro html_translation_header() %}
     {% if translations|length > 1 %}
         <div id="toptranslations">
