@@ -92,15 +92,12 @@ img#logo {
 
 /* social media links */
 .socialmedia {
-    text-align : center;
-}
-
-.socialmedia img {
   float: left
 }
 
 .small_links {
-  display: inline;
+  width: 32px;
+  height: 32x;
 }
 
 /* Sidebar links */
