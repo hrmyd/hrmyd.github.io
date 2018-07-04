@@ -567,15 +567,10 @@ img#logo {
   width: 200px;
 }
 
-/* image fix */
-.overflow {
-  display: inline-block;
-}
-
 /* social media links */
 .socialmedia {
   float: left;
-  margin: 5px;
+  margin: 15px;
 }
 
 .small_links {
@@ -585,7 +580,7 @@ img#logo {
 }
 
 .media_box {
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 
 /* Sidebar links */
