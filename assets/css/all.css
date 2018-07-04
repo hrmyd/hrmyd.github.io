@@ -656,6 +656,95 @@ a.sidebar-nav-item:focus {
   text-align: center;
 }
 
+/* Gallery */
+.post-list{
+  list-style-type: none;
+}
+
+.post-list_title{
+  font-weight: normal;
+}
+
+.gallery_container{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-size: 0;
+}
+
+.gallery_figure{
+  flex: 1;
+  margin: 2rem;
+  min-width: 300px;
+  position: relative;
+}
+
+.gallery_link{
+  margin: 0;
+}
+
+.gallery_figure--narrow{
+  flex: 0.5;
+  min-width: 150px;
+}
+
+.gallery_image{
+  width: 100%;
+  height: auto;
+}
+
+.post-group_body {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/* Images */
+
+/* figure container is only present when using figure directive */
+.post_body > div > .figure,
+.post_body > div > a.image-reference{
+    text-align: center;
+    /* Remove margin for full-width images. */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.caption{
+    color: #999;
+}
+
+/*
+ image-reference is a class nikola adds to images within posts.
+*/
+
+.image-reference{
+    display: block;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* figure is only used for the figure ReST directive. */
+.figure{
+    margin-bottom: 3rem;
+}
+
+.figure > .image-reference{
+    margin-bottom: 0;
+}
+
+/* Ensure the caption is not wider than the image or the width of the body copy (whichever is widest) */
+.figure > .caption {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Targets the img in both the figure and the thumbnail directives. */
+.image-reference img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
