@@ -143,7 +143,7 @@ NAVIGATION_LINKS = {
     ),
 }
 
-SOCIAL_MEDIA_LINKS = {
+SOCIAL_MEDIA = {
     DEFAULT_LANG: (
         ("https://www.linkedin.com/in/hrnmy/", "LinkedIn", "/images/linkedin.png"),
         ("https://github.com/hrmyd/", "Github", "/images/github.png"),

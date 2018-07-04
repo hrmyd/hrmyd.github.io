@@ -123,3 +123,9 @@ lang="{{ lang }}">
     {% endfor %}
     </ul>
 {% endmacro %}
+
+{% macro html_social_media() %}
+    {% for url, text, img in content_footer[lang] %}
+        <a href="{{url}}" alt="{{text}}"><img src="{{img}}"></a>
+    {% endfor %}
+{% endmacro %}

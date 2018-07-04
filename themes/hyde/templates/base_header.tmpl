@@ -7,7 +7,6 @@
         {{ html_site_description() }}
         {{ html_translation_header() }}
         {{ html_navigation_links() }}
-        {{ html_social_media() }}
         {% if search_form %}
             <div class="searchform" role="search">
                 {{ search_form }}
@@ -45,14 +44,6 @@
     {{ template_hooks['menu']() }}
     {{ template_hooks['menu_alt']() }}
     </nav>
-{% endmacro %}
-
-{% macro html_social_media() %}
-    <div>
-    {% for url, text, img in social_media_links[lang] %}
-        <a href="{{url}}" alt="{{text}}"><img src="{{img}}"></a>
-    {% endfor %}
-    </div>
 {% endmacro %}
 
 {% macro html_translation_header() %}

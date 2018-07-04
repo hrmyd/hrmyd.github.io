@@ -5,18 +5,11 @@
     {% if content_footer %}
         <footer id="footer">
               <span class="copyright">
-              {{ content_footer }}
+              {{ base.html_social_media() }}
+              {{ content_footer['copyright'] }}
             </span>
             </p>
             {{ template_hooks['page_footer']() }}
         </footer>
     {% endif %}
-{% endmacro %}
-
-{% macro html_social_media() %}
-    <div>
-    {% for url, text, img in social_media_links[lang] %}
-        <a href="{{url}}" alt="{{text}}"><img src="{{img}}"></a>
-    {% endfor %}
-    </div>
 {% endmacro %}
