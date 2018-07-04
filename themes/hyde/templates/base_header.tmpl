@@ -50,7 +50,7 @@
 {% macro html_social_media() %}
     <div>
     {% for url, text, img in social_media_links[lang] %}
-        <a class="sidebar-nav-item" href="{{url}}" alt="{{text}}"><img src="{{img}}"></a>
+        <a class="sidebar-nav-item" href="{{url}}" alt="{{text}}">{{text}}</a>
     {% endfor %}
     </div>
 {% endmacro %}
