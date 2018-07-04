@@ -7,4 +7,11 @@
 .. description: 
 .. type: text
 
-Write your page here.
+.. image:: /images/linkedin.png
+   :target: https://www.linkedin.com/in/hrnmy/
+
+.. image:: /images/twitter.png
+   :target: https://twitter.com/hduvvuri8
+
+.. image:: /images/instagram.png
+   :target: https://www.instagram.com/hrnmy/
