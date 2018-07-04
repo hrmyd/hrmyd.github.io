@@ -7,9 +7,9 @@
 .. description: 
 .. type: text
 
- +-------------+-------------+-------------+
+
  | |linkedin|  +  |twitter|  + |instagram| |
- +-------------+-------------+-------------+
+
 
 .. |linkedin| image:: /images/linkedin.png
    :target: https://www.linkedin.com/in/hrnmy/
