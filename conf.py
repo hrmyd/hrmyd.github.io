@@ -21,11 +21,11 @@ BLOG_AUTHOR = "Hiranmayi Duvvuri"  # (translatable)
 BLOG_TITLE = "Hiranmayi Duvvuri"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://hrmyd.github.io/"
+SITE_URL = "http://hiranmayiduvvuri.com"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://hrmyd.github.io/"
-BLOG_EMAIL = "hiranmayid8@gmail.com"
+BLOG_EMAIL = "hiranmayid8[REMOVE]@gmail.com"
 BLOG_DESCRIPTION = "portfolio and resume/cv"  # (translatable)
 
 # Nikola is multilingual!

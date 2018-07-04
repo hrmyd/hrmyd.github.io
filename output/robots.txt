@@ -1,4 +1,4 @@
-Sitemap: https://hrmyd.github.io/sitemapindex.xml
+Sitemap: http://hiranmayiduvvuri.com/sitemapindex.xml
 
 User-Agent: *
-Host: hrmyd.github.io
+Host: hiranmayiduvvuri.com
