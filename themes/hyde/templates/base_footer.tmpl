@@ -12,3 +12,11 @@
         </footer>
     {% endif %}
 {% endmacro %}
+
+{% macro html_social_media() %}
+    <div>
+    {% for url, text, img in social_media_links[lang] %}
+        <a href="{{url}}" alt="{{text}}"><img src="{{img}}"></a>
+    {% endfor %}
+    </div>
+{% endmacro %}
