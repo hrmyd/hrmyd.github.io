@@ -14,13 +14,13 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link rel="canonical" href="http://hiranmayiduvvuri.com/galleries/Nature/">
 <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <style type="text/css">
-    #gallery_container {
-        position: relative;
-    }
     .image-block {
-        position: absolute;
+        display: inline-block;
     }
-</style>
+    .flowr_row {
+        width: 100%;
+    }
+    </style>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 </head>
 <body class="">
@@ -104,11 +104,45 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 </ul>
 </noscript>
     </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.js" integrity="sha256-SoEATAB7PgNWyyK100I7yQXYm5V08k5SFupDP0h72MY=" crossorigin="anonymous"></script><script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
-var jsonContent = [{"size": {"h": 119, "w": 180}, "title": "", "url": "000005860026.jpg", "url_thumb": "000005860026.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850018.jpg", "url_thumb": "000018850018.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850033.jpg", "url_thumb": "000018850033.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850034.jpg", "url_thumb": "000018850034.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850035.jpg", "url_thumb": "000018850035.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000081720031.jpg", "url_thumb": "000081720031.thumbnail.jpg"}];
-var thumbnailSize = 180;
-renderGallery(jsonContent, thumbnailSize);
-window.addEventListener('resize', renderGallery);
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.js" integrity="sha256-SoEATAB7PgNWyyK100I7yQXYm5V08k5SFupDP0h72MY=" crossorigin="anonymous"></script><script src="../../assets/js/flowr.js"></script><script>
+jsonContent = [{"size": {"h": 119, "w": 180}, "title": "", "url": "000005860026.jpg", "url_thumb": "000005860026.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850018.jpg", "url_thumb": "000018850018.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850033.jpg", "url_thumb": "000018850033.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850034.jpg", "url_thumb": "000018850034.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850035.jpg", "url_thumb": "000018850035.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000081720031.jpg", "url_thumb": "000081720031.thumbnail.jpg"}];
+flowr(document.querySelectorAll("#gallery_container")[0], {
+        data : jsonContent,
+        height : 180*.6,
+        padding: 5,
+        rows: -1,
+        render : function(params) {
+            // Just return a div, string or a dom object, anything works fine
+            var img = document.createElement("img");
+            img.setAttribute('src', params.itemData.url_thumb);
+            img.setAttribute('width', params.width);
+            img.setAttribute('height', params.height);
+            img.setAttribute('alt', params.itemData.title);
+            img.style.maxWidth = '100%';
+            link = document.createElement("a");
+            link.setAttribute('href', params.itemData.url);
+            link.setAttribute('class', 'image-reference');
+            div = document.createElement("div");
+            div.setAttribute('class', 'image-block');
+            div.setAttribute('title', params.itemData.title);
+            div.setAttribute('data-toggle', "tooltip")
+            link.append(img);
+            div.append(link);
+            //div.hover(div.tooltip());
+            return div;
+        },
+        itemWidth : function(data) { return data.size.w; },
+        itemHeight : function(data) { return data.size.h; },
+        complete : function(params) {
+            if( jsonContent.length > params.renderedItems ) {
+                nextRenderList = jsonContent.slice( params.renderedItems );
+            }
+        }
+    });
+    baguetteBox.run('#gallery_container', {
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
 </script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
