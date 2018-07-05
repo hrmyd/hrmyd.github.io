@@ -7,4 +7,9 @@
 .. description: 
 .. type: text
 
-Write your page here.
+Publications
+============
+(bold) pytc: Open-Source Python Software for Global Analyses of Isothermal Titration Calorimetry Data
+Hiranmayi Duvvuri, Lucas C. Wheeler, and Michael J. Harms
+(italics) Biochemistry (bold) 2018 (italics) 57 (18), 2578-2583
+DOI: 10.1021/acs.biochem.7b01264
