@@ -1,4 +1,4 @@
-.. title: Projects
+.. title: Publications
 .. slug: publications
 .. date: 2018-07-03 10:42:16 UTC-07:00
 .. tags: 
@@ -7,9 +7,6 @@
 .. description: 
 .. type: text
 
-
-Publications
-------------
 
 .. publication_list:: bibtex/my_publications.bib
     :style: unsrt

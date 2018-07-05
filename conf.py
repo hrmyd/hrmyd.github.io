@@ -137,7 +137,8 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/about/", "About"),
         ("/resume/", "Resume"),
-        ("/publications/", "Projects"),
+        ("/projects/", "Projects"),
+        ("/publications/", "Publications"),
         ("/galleries/", "Photography"),
         ("/blog/", "Blog"),
     ),
