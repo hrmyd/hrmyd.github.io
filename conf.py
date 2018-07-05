@@ -137,7 +137,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/about/", "About"),
         ("/resume/", "Resume"),
-        ("/projects/", "Projects"),
+        ("/publications/", "Projects"),
         ("/galleries/", "Photography"),
         ("/blog/", "Blog"),
     ),
@@ -204,8 +204,10 @@ PAGES = (
     ("pages/*.md", "", "page.tmpl"),
     ("pages/*.txt", "", "page.tmpl"),
     ("pages/*.html", "", "page.tmpl"),
+    ("projects/*.rst", "projects", "project.tmpl"),
 )
 
+PROJECT_PATH = 'projects'
 
 # Below this point, everything is optional
 
