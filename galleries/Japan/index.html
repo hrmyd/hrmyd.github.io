@@ -6,7 +6,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Hiranmayi Duvvuri · Japan 2018 </title>
-<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
@@ -119,12 +119,17 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 </ul>
 </noscript>
     </div>
-
-<script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
+                <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
 var jsonContent = [{"size": {"h": 180, "w": 119}, "title": "R1 003", "url": "006232-R1-003.jpg", "url_thumb": "006232-R1-003.thumbnail.jpg"}, {"size": {"h": 118, "w": 180}, "title": "R1 013", "url": "006232-R1-013.jpg", "url_thumb": "006232-R1-013.thumbnail.jpg"}, {"size": {"h": 118, "w": 180}, "title": "R1 014", "url": "006232-R1-014.jpg", "url_thumb": "006232-R1-014.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 016", "url": "006232-R1-016.jpg", "url_thumb": "006232-R1-016.thumbnail.jpg"}, {"size": {"h": 118, "w": 180}, "title": "R1 022", "url": "006232-R1-022.jpg", "url_thumb": "006232-R1-022.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 017", "url": "006233-R1-017.jpg", "url_thumb": "006233-R1-017.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 009", "url": "006234-R1-009.jpg", "url_thumb": "006234-R1-009.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 013", "url": "006234-R1-013.jpg", "url_thumb": "006234-R1-013.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 006", "url": "006236-R1-006.jpg", "url_thumb": "006236-R1-006.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "R1 024", "url": "006236-R1-024.jpg", "url_thumb": "006236-R1-024.thumbnail.jpg"}];
 var thumbnailSize = 180;
 renderGallery(jsonContent, thumbnailSize);
 window.addEventListener('resize', renderGallery);
-</script>
+</script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="../../assets/js/all-nocdn.js"></script>
 </body>
 </html>

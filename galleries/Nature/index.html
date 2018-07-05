@@ -6,7 +6,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Hiranmayi Duvvuri · The Pacific Northwest </title>
-<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
@@ -103,12 +103,17 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 </ul>
 </noscript>
     </div>
-
-<script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
+                <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/justified-layout.min.js"></script><script src="../../assets/js/gallery.min.js"></script><script>
 var jsonContent = [{"size": {"h": 119, "w": 180}, "title": "", "url": "000005860026.jpg", "url_thumb": "000005860026.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850018.jpg", "url_thumb": "000018850018.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850033.jpg", "url_thumb": "000018850033.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000018850034.jpg", "url_thumb": "000018850034.thumbnail.jpg"}, {"size": {"h": 119, "w": 180}, "title": "", "url": "000018850035.jpg", "url_thumb": "000018850035.thumbnail.jpg"}, {"size": {"h": 180, "w": 119}, "title": "", "url": "000081720031.jpg", "url_thumb": "000081720031.thumbnail.jpg"}];
 var thumbnailSize = 180;
 renderGallery(jsonContent, thumbnailSize);
 window.addEventListener('resize', renderGallery);
-</script>
+</script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="../../assets/js/all-nocdn.js"></script>
 </body>
 </html>
