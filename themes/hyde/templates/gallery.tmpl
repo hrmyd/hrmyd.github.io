@@ -1,5 +1,6 @@
 {#  -*- coding: utf-8 -*- #}
 {% extends 'base.tmpl' %}
+{% import 'comments_helper.tmpl' as comments with context %}
 {% import 'ui_helper.tmpl' as ui with context %}
 {% block sourcelink %}{% endblock %}
 
@@ -32,6 +33,9 @@
     {% endfor %}
 </ul>
 </noscript>
+{% endif %}
+{% if site_has_comments and enable_comments %}
+    {{ comments.comment_form(None, permalink, title) }}
 {% endif %}
 {% endblock %}
 
