@@ -1,1 +1,27 @@
-{}
+{
+    "pytc_gui": {
+        "bugtracker": "https://github.com/harmslab/pytc-gui/issues",
+        "data": "",
+        "description": "",
+        "featured": "",
+        "filters": "",
+        "github": "https://github.com/harmslab/pytc-gui",
+        "hidden": "",
+        "hyphenate": "",
+        "language": "Python",
+        "license": "The Unlicense",
+        "password": "",
+        "permalink": "/projects/pytc_gui/",
+        "priority": "",
+        "role": "Contributor",
+        "slug": "pytc_gui",
+        "sort": "",
+        "status": "featured",
+        "template": "",
+        "text": "<span></span>",
+        "title": "pytc GUI",
+        "type": "text",
+        "updated": "2018-07-03 10:30:24 UTC-07:00",
+        "url_type": ""
+    }
+}
