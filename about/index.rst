@@ -9,5 +9,6 @@
 
 .. image:: /images/me.jpg
     :align: left
+    :width: 30%
 
 I like to be outdoors, code, and drink beer.
