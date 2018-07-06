@@ -7,4 +7,4 @@
 .. description: 
 .. type: text
 
-Write your page here.
+.. image:: images/hiranmayi-cv.png

@@ -11,3 +11,4 @@
 .. language: Python
 .. status: featured
 
+Isothermal Titration Calorimetry Analysis software. GUI is built in PyQT 5 and is available for mac and windows.
