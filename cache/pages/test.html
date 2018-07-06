@@ -1,0 +1,85 @@
+<p>%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% <a class="reference external" href="https://github.com/posquit0/Awesome-CV">https://github.com/posquit0/Awesome-CV</a>
+%
+% Author:
+% Claud D. Park &lt;<a class="reference external" href="mailto:posquit0.bj&#64;gmail.com">posquit0.bj&#64;gmail.com</a>&gt;
+% <a class="reference external" href="http://www.posquit0.com">http://www.posquit0.com</a>
+%
+% Template license:
+% CC BY-SA 4.0 (<a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>)
+%</p>
+<p>%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+documentclass[11pt, a4paper]{awesome-cv}</p>
+<p>% Configure page margins with geometry
+geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}</p>
+<p>% Specify the location of the included fonts
+fontdir[fonts/]</p>
+<p>% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% definecolor{awesome}{HTML}{CA63A8}</p>
+<p>% Colors for text
+% Uncomment if you would like to specify your own color
+% definecolor{darktext}{HTML}{414141}
+% definecolor{text}{HTML}{333333}
+% definecolor{graytext}{HTML}{5D5D5D}
+% definecolor{lighttext}{HTML}{999999}</p>
+<p>% Set false if you don't want to highlight section with awesome color
+setbool{acvSectionColorHighlight}{false}</p>
+<p>% If you would like to change the social information separator from a pipe (|) to something else
+renewcommand{acvHeaderSocialSep}{quadtextbarquad}</p>
+<p>%-------------------------------------------------------------------------------
+%       PERSONAL INFORMATION
+%       Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% photo{./examples/profile.png}
+name{Hiranmayi}{Duvvuri}
+position{Associate Data Scientist}
+address{Portland, OR}</p>
+<p>mobile{REDACTED}
+<a class="reference external" href="mailto:email{hiranmayid8&#64;gmail.com">email{hiranmayid8&#64;gmail.com</a>}
+homepage{hiranmayiduvvuri.com}
+github{hrmyd}
+% linkedin{posquit0}
+% gitlab{gitlab-id}
+% stackoverflow{SO-id}{SO-name}
+% <a class="reference external" href="mailto:twitter{&#64;twit">twitter{&#64;twit</a>}
+% skype{skype-id}
+% reddit{reddit-id}
+% extrainfo{extra informations}</p>
+<p>%-------------------------------------------------------------------------------
+begin{document}</p>
+<p>% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+makecvheader</p>
+<p>% Print the footer with 3 arguments(&lt;left&gt;, &lt;center&gt;, &lt;right&gt;)
+% Leave any of these blank if they are not needed
+makecvfooter</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 83)</p>
+Unexpected indentation.</div>
+<blockquote>
+{today}
+{Hiranmayi Duvvuri~~~·~~~CV}
+{thepage}</blockquote>
+<p>%-------------------------------------------------------------------------------
+%       CV/RESUME CONTENT
+%       Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+input{cv/summary.tex}
+input{cv/skills.tex}
+input{cv/experience.tex}
+input{cv/publications.tex}
+input{cv/education.tex}</p>
+<p>%-------------------------------------------------------------------------------
+end{document}</p>

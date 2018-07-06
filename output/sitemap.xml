@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hiranmayiduvvuri.com/</loc>
-  <lastmod>2018-07-06T00:47:00Z</lastmod>
+  <lastmod>2018-07-06T05:17:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/about/</loc>
@@ -51,6 +51,10 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/resume/</loc>
-  <lastmod>2018-07-06T00:47:00Z</lastmod>
+  <lastmod>2018-07-06T05:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/test/</loc>
+  <lastmod>2018-07-06T05:17:00Z</lastmod>
  </url>
 </urlset>
