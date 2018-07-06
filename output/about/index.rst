@@ -7,4 +7,7 @@
 .. description: 
 .. type: text
 
-Write your page here.
+.. image:: /images/me.jpg
+    :align: left
+
+I like to be outdoors, code, and drink beer.
