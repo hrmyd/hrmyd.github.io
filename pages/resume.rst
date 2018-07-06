@@ -7,6 +7,7 @@
 .. description: 
 .. type: text
 
-PDF download: :download:`pdf <files/hiranmayi-cv.pdf>`
+PDF download: `Resume
+</files/hiranmayi-cv.pdf>`_.
 
-.. image:: images/hiranmayi-cv.png
+.. image:: /images/hiranmayi-cv.png
