@@ -150,6 +150,7 @@ SOCIAL_MEDIA = {
         ("https://github.com/hrmyd/", "Github", "/images/github.png"),
         ("https://twitter.com/hduvvuri8", "Twitter", "/images/twitter.png"),
         ("https://www.instagram.com/hrnmy/", "Instagram", "/images/instagram.png"),
+        ("https://www.flickr.com/photos/hrnmyd/", "Flickr", "/images/flickr.png"),
     ),
 }
 
