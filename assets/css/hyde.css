@@ -87,8 +87,9 @@ img#logo {
 
 /* social media links */
 .socialmedia {
-  float: left;
-  margin: 20px;
+  width: auto;
+  height: auto;
+  display: inline-block;
 }
 
 .small_links {
