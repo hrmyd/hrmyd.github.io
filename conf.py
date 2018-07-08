@@ -159,7 +159,7 @@ THEME = "hyde"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#838383'
 
 # Determines how the formulae are rendered. Possibilities:
 #  - "latex_formula_image_renderer": renders formulae as graphics and includes them.
