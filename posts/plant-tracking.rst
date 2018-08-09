@@ -8,7 +8,7 @@
 .. type: text
 
 
-Plants June vs August 
+Plants June vs August
 ======================
 
 Monstera Deliciosa
