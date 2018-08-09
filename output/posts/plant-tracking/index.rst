@@ -10,9 +10,6 @@
 Plants June vs August 
 =====================
 
-
-Monstera Deliciosa - June (Left) August(Right)
-
 .. image:: /images/plants/monstera_june.jpg
     :width: 45%
     :align: right
@@ -20,9 +17,6 @@ Monstera Deliciosa - June (Left) August(Right)
 .. image:: /images/plants/monstera_august.jpg
     :width: 45%
     :align: right
-
-
-Money Tree - June (Left) August(Right)
 
 .. image:: /images/plants/money_tree_june.jpg
     :width: 45%
@@ -32,9 +26,6 @@ Money Tree - June (Left) August(Right)
     :width: 45%
     :align: right
 
-
-Parlor Palm - June (Left) August(Right)
-
 .. image:: /images/plants/parlor_june.jpg
     :width: 45%
     :align: right
@@ -42,9 +33,6 @@ Parlor Palm - June (Left) August(Right)
 .. image:: /images/plants/parlor_august.jpg
     :width: 45%
     :align: right
-
-
-African Violet - June (Left) August(Right)
 
 .. image:: /images/plants/violet_june.jpg
     :width: 45%
