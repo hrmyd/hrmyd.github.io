@@ -7,6 +7,8 @@
 .. description: 
 .. type: text
 
+Tracking plant growth over the last couple months! I need to work on taking consistent photos,
+but these do the trick for now! My monstera in particular has come a long way after facing root rot :)
 
 Plants June vs August
 ======================
