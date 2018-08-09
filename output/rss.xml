@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link rel="self" type="application/rss+xml" href="http://hiranmayiduvvuri.com/rss.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:05:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;img alt="/images/plants/monstera_june.jpg" class="align-right" src="http://hiranmayiduvvuri.com/images/plants/monstera_june.jpg"&gt;
-&lt;img alt="/images/plants/monstera_august.jpg" class="align-left" src="http://hiranmayiduvvuri.com/images/plants/monstera_august.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link rel="self" type="application/rss+xml" href="http://hiranmayiduvvuri.com/rss.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:13:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="pic 1" src="http://hiranmayiduvvuri.com/images/plants/monstera_june.jpg" style="width: 45%;"&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id1"&gt;&lt;span class="problematic" id="id2"&gt;|pic2|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Monstera Deliciosa - June (Left) August(Right)&lt;/p&gt;
-&lt;img alt="/images/plants/money_tree_june.jpg" class="align-right" src="http://hiranmayiduvvuri.com/images/plants/money_tree_june.jpg"&gt;
-&lt;img alt="/images/plants/money_tree_august.jpg" class="align-left" src="http://hiranmayiduvvuri.com/images/plants/money_tree_august.jpg"&gt;
+&lt;p&gt;&lt;img alt="pic 3" src="http://hiranmayiduvvuri.com/images/plants/money_tree_june.jpg" style="width: 45%;"&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id3"&gt;&lt;span class="problematic" id="id4"&gt;|pic4|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Money Tree - June (Left) August(Right)&lt;/p&gt;
-&lt;img alt="/images/plants/parlor_june.jpg" class="align-right" src="http://hiranmayiduvvuri.com/images/plants/parlor_june.jpg"&gt;
-&lt;img alt="/images/plants/parlor_august.jpg" class="align-left" src="http://hiranmayiduvvuri.com/images/plants/parlor_august.jpg"&gt;
+&lt;p&gt;&lt;img alt="pic 5" src="http://hiranmayiduvvuri.com/images/plants/parlor_june.jpg" style="width: 45%;"&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id5"&gt;&lt;span class="problematic" id="id6"&gt;|pic6|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Parlor Palm - June (Left) August(Right)&lt;/p&gt;
-&lt;img alt="/images/plants/violet_june.jpg" class="align-right" src="http://hiranmayiduvvuri.com/images/plants/violet_june.jpg"&gt;
-&lt;img alt="/images/plants/violet_august.jpg" class="align-left" src="http://hiranmayiduvvuri.com/images/plants/violet_august.jpg"&gt;
-&lt;p&gt;African Violet - June (Left) August(Right)&lt;/p&gt;&lt;/div&gt;</description><guid>http://hiranmayiduvvuri.com/posts/plant-tracking/</guid><pubDate>Thu, 09 Aug 2018 21:43:33 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="pic 7" src="http://hiranmayiduvvuri.com/images/plants/violet_june.jpg" style="width: 45%;"&gt; &lt;img alt="pic 8" src="http://hiranmayiduvvuri.com/images/plants/violet_august.jpg" style="width: 45%;"&gt;&lt;/p&gt;
+&lt;p&gt;African Violet - June (Left) August(Right)&lt;/p&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 4); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic2".&lt;/div&gt;
+&lt;div class="system-message" id="id3"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 15); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id4"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic4".&lt;/div&gt;
+&lt;div class="system-message" id="id5"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 26); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id6"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic6".&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://hiranmayiduvvuri.com/posts/plant-tracking/</guid><pubDate>Thu, 09 Aug 2018 21:43:33 GMT</pubDate></item></channel></rss>
