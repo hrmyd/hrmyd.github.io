@@ -83,3 +83,11 @@ Got some babies from my coworker, waiting for them to fully root!
 
 .. image:: /images/plants/spider_plant_august.jpg
     :width: 45%
+
+Bird of Paradise
+-----------------
+
+My newest and biggest plant!
+
+.. image:: /images/plants/strelitzia_august.jpg
+    :width: 45%
