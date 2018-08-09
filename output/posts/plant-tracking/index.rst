@@ -8,9 +8,7 @@
 .. type: text
 
 Plants June vs August 
-=====================
-
-
+---------------------
 
 .. image:: /images/plants/monstera_june.jpg
     :width: 45%
