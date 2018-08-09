@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hiranmayiduvvuri.com/</loc>
-  <lastmod>2018-08-09T18:38:00Z</lastmod>
+  <lastmod>2018-08-09T22:01:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/2018/</loc>
@@ -31,15 +31,19 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/</loc>
-  <lastmod>2018-07-08T22:29:00Z</lastmod>
+  <lastmod>2018-08-09T18:38:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Japan/</loc>
-  <lastmod>2018-07-08T22:29:00Z</lastmod>
+  <lastmod>2018-08-09T18:38:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Nature/</loc>
-  <lastmod>2018-07-08T22:28:00Z</lastmod>
+  <lastmod>2018-08-09T18:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/posts/plant-tracking/</loc>
+  <lastmod>2018-08-09T22:01:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/testing/</loc>
