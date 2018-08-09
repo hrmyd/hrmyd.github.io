@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link type="application/rss+xml" rel="self" href="http://hiranmayiduvvuri.com/rss.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:30:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;p&gt;Tracking plant growth over the last couple months! I need to work on taking consistent photos,
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link href="http://hiranmayiduvvuri.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:36:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;p&gt;Tracking plant growth over the last couple months! I need to work on taking consistent photos,
 but these do the trick for now! My monstera in particular has come a long way after facing root rot :)&lt;/p&gt;
 &lt;div class="section" id="plants-june-vs-august"&gt;
 &lt;h2&gt;Plants June vs August&lt;/h2&gt;
@@ -22,5 +22,26 @@ but these do the trick for now! My monstera in particular has come a long way af
 &lt;h3&gt;African Violet&lt;/h3&gt;
 &lt;img alt="/images/plants/violet_june.jpg" class="align-left" src="http://hiranmayiduvvuri.com/images/plants/violet_june.jpg" style="width: 45%;"&gt;
 &lt;img alt="/images/plants/violet_august.jpg" src="http://hiranmayiduvvuri.com/images/plants/violet_august.jpg" style="width: 45%;"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="new-plants"&gt;
+&lt;h2&gt;New Plants&lt;/h2&gt;
+&lt;p&gt;New babies acquired! Haven't had them long enough to notice growth yet&lt;/p&gt;
+&lt;div class="section" id="snake-plant"&gt;
+&lt;h3&gt;Snake Plant&lt;/h3&gt;
+&lt;img alt="/images/plants/sansevieria_july.jpg" src="http://hiranmayiduvvuri.com/images/plants/sansevieria_july.jpg" style="width: 45%;"&gt;
+&lt;/div&gt;
+&lt;div class="section" id="areca-palm"&gt;
+&lt;h3&gt;Areca Palm&lt;/h3&gt;
+&lt;img alt="/images/plants/areca_august.jpg" src="http://hiranmayiduvvuri.com/images/plants/areca_august.jpg" style="width: 45%;"&gt;
+&lt;/div&gt;
+&lt;div class="section" id="satin-pothos"&gt;
+&lt;h3&gt;Satin Pothos&lt;/h3&gt;
+&lt;img alt="/images/plants/satin_pothos_august.jpg" src="http://hiranmayiduvvuri.com/images/plants/satin_pothos_august.jpg" style="width: 45%;"&gt;
+&lt;/div&gt;
+&lt;div class="section" id="spider-plant-babies"&gt;
+&lt;h3&gt;Spider Plant Babies&lt;/h3&gt;
+&lt;p&gt;Got some babies from my coworker, waiting for them to fully root!&lt;/p&gt;
+&lt;img alt="/images/plants/spider_plant_august.jpg" src="http://hiranmayiduvvuri.com/images/plants/spider_plant_august.jpg" style="width: 45%;"&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</description><guid>http://hiranmayiduvvuri.com/posts/plant-tracking/</guid><pubDate>Thu, 09 Aug 2018 21:43:33 GMT</pubDate></item></channel></rss>

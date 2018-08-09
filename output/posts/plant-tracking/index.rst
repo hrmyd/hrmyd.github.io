@@ -52,3 +52,34 @@ African Violet
 
 .. image:: /images/plants/violet_august.jpg
     :width: 45%
+
+New Plants
+===========
+
+New babies acquired! Haven't had them long enough to notice growth yet
+
+Snake Plant
+------------
+
+.. image:: /images/plants/sansevieria_july.jpg
+    :width: 45%
+
+Areca Palm
+-----------
+
+.. image:: /images/plants/areca_august.jpg
+    :width: 45%
+
+Satin Pothos
+-------------
+
+.. image:: /images/plants/satin_pothos_august.jpg
+    :width: 45%
+
+Spider Plant Babies
+--------------------
+
+Got some babies from my coworker, waiting for them to fully root!
+
+.. image:: /images/plants/spider_plant_august.jpg
+    :width: 45%
