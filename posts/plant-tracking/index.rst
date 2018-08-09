@@ -14,20 +14,28 @@ Plants June vs August
 
 .. image:: /images/plants/monstera_june.jpg
     :width: 45%
+    :align: left
+
 .. image:: /images/plants/monstera_august.jpg
     :width: 45%
 
 .. image:: /images/plants/money_tree_june.jpg
     :width: 45%
+    :align: left
+
 .. image:: /images/plants/money_tree_august.jpg
     :width: 45%
 
 .. image:: /images/plants/parlor_june.jpg
     :width: 45%
+    :align: left
+
 .. image:: /images/plants/parlor_august.jpg
     :width: 45%
 
 .. image:: /images/plants/violet_june.jpg
     :width: 45%
+    :align: left
+
 .. image:: /images/plants/violet_august.jpg
     :width: 45%
