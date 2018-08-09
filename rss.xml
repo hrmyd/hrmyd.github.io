@@ -1,9 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link type="application/rss+xml" rel="self" href="http://hiranmayiduvvuri.com/rss.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:13:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="pic 1" src="http://hiranmayiduvvuri.com/images/plants/monstera_june.jpg" style="width: 45%;"&gt; &lt;img alt="pic 2" src="http://hiranmayiduvvuri.com/images/plants/monstera_august.jpg" style="width: 45%;"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Hiranmayi Duvvuri</title><link>http://hiranmayiduvvuri.com/</link><description>portfolio and resume/cv</description><atom:link rel="self" type="application/rss+xml" href="http://hiranmayiduvvuri.com/rss.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:hiranmayid8[REMOVE]@gmail.com"&gt;Hiranmayi Duvvuri&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 22:15:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Plant Tracking</title><link>http://hiranmayiduvvuri.com/posts/plant-tracking/</link><dc:creator>Hiranmayi Duvvuri</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id1"&gt;&lt;span class="problematic" id="id2"&gt;|pic 1|&lt;/span&gt;&lt;/a&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id3"&gt;&lt;span class="problematic" id="id4"&gt;|pic 2|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Monstera Deliciosa - June (Left) August(Right)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="pic 3" src="http://hiranmayiduvvuri.com/images/plants/money_tree_june.jpg" style="width: 45%;"&gt; &lt;img alt="pic 4" src="http://hiranmayiduvvuri.com/images/plants/money_tree_august.jpg" style="width: 45%;"&gt;&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 8)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/monstera_june.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 8)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 1" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 1| image:: /images/plants/monstera_june.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 12)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/monstera_august.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 12)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 2" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 2| image:: /images/plants/monstera_august.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id5"&gt;&lt;span class="problematic" id="id6"&gt;|pic 3|&lt;/span&gt;&lt;/a&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id7"&gt;&lt;span class="problematic" id="id8"&gt;|pic 4|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Money Tree - June (Left) August(Right)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="pic 5" src="http://hiranmayiduvvuri.com/images/plants/parlor_june.jpg" style="width: 45%;"&gt; &lt;img alt="pic 6" src="http://hiranmayiduvvuri.com/images/plants/parlor_august.jpg" style="width: 45%;"&gt;&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 20)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/money_tree_june.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 20)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 3" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 3| image:: /images/plants/money_tree_june.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 24)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/money_tree_august.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 24)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 4" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 4| image:: /images/plants/money_tree_august.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id9"&gt;&lt;span class="problematic" id="id10"&gt;|pic 5|&lt;/span&gt;&lt;/a&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id11"&gt;&lt;span class="problematic" id="id12"&gt;|pic 6|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Parlor Palm - June (Left) August(Right)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="pic 7" src="http://hiranmayiduvvuri.com/images/plants/violet_june.jpg" style="width: 45%;"&gt; &lt;img alt="pic 8" src="http://hiranmayiduvvuri.com/images/plants/violet_august.jpg" style="width: 45%;"&gt;&lt;/p&gt;
-&lt;p&gt;African Violet - June (Left) August(Right)&lt;/p&gt;&lt;/div&gt;</description><guid>http://hiranmayiduvvuri.com/posts/plant-tracking/</guid><pubDate>Thu, 09 Aug 2018 21:43:33 GMT</pubDate></item></channel></rss>
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 32)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/parlor_june.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 32)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 5" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 5| image:: /images/plants/parlor_june.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 36)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/parlor_august.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 36)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 6" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 6| image:: /images/plants/parlor_august.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id13"&gt;&lt;span class="problematic" id="id14"&gt;|pic 7|&lt;/span&gt;&lt;/a&gt; &lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id15"&gt;&lt;span class="problematic" id="id16"&gt;|pic 8|&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;African Violet - June (Left) August(Right)&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 44)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/violet_june.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 44)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 7" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 7| image:: /images/plants/violet_june.jpg
+    :width: 45%
+    :align: right
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 48)&lt;/p&gt;
+&lt;p&gt;Error in "image" directive: "right" is not a valid value for the "align" option within a substitution definition.  Valid values for "align" are: "top", "middle", "bottom".&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+image:: /images/plants/violet_august.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 48)&lt;/p&gt;
+&lt;p&gt;Substitution definition "pic 8" empty or invalid.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. |pic 8| image:: /images/plants/violet_august.jpg
+    :width: 45%
+    :align: right
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 4); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 1".&lt;/div&gt;
+&lt;div class="system-message" id="id3"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 4); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id4"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 2".&lt;/div&gt;
+&lt;div class="system-message" id="id5"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 16); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id6"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 3".&lt;/div&gt;
+&lt;div class="system-message" id="id7"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 16); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id8"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 4".&lt;/div&gt;
+&lt;div class="system-message" id="id9"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 28); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id10"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 5".&lt;/div&gt;
+&lt;div class="system-message" id="id11"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 28); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id12"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 6".&lt;/div&gt;
+&lt;div class="system-message" id="id13"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 40); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id14"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 7".&lt;/div&gt;
+&lt;div class="system-message" id="id15"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 40); &lt;em&gt;&lt;a href="http://hiranmayiduvvuri.com/posts/plant-tracking/#id16"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Undefined substitution referenced: "pic 8".&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://hiranmayiduvvuri.com/posts/plant-tracking/</guid><pubDate>Thu, 09 Aug 2018 21:43:33 GMT</pubDate></item></channel></rss>
