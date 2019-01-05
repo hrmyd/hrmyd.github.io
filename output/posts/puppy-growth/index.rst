@@ -35,5 +35,5 @@ From August to December
     :width: 45%
     :align: left
 
-.. image:: /images/pepper/p04.jpeg
+.. image:: /images/pepper/p04.jpg
     :width: 45%
