@@ -7,11 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hiranmayiduvvuri.com/</loc>
-  <lastmod>2019-01-05T05:42:00Z</lastmod>
+  <lastmod>2019-01-05T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/2018/</loc>
   <lastmod>2019-01-05T05:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/2019/</loc>
+  <lastmod>2019-01-05T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/about/</loc>
@@ -19,7 +23,7 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/archive.html</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-01-05T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/blog/</loc>
@@ -31,7 +35,7 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/</loc>
-  <lastmod>2019-01-05T05:42:00Z</lastmod>
+  <lastmod>2019-01-05T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Japan/</loc>
@@ -43,11 +47,15 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Other/</loc>
-  <lastmod>2019-01-05T05:42:00Z</lastmod>
+  <lastmod>2019-01-05T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/plant-tracking/</loc>
   <lastmod>2019-01-05T05:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/posts/puppy-growth/</loc>
+  <lastmod>2019-01-05T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/</loc>
