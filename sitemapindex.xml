@@ -7,11 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://hiranmayiduvvuri.com/galleries/Japan/rss.xml</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-01-05T05:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://hiranmayiduvvuri.com/galleries/Nature/rss.xml</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-01-05T05:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://hiranmayiduvvuri.com/galleries/Other/rss.xml</loc>
+  <lastmod>2019-01-05T05:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://hiranmayiduvvuri.com/galleries/rss.xml</loc>
@@ -23,6 +27,6 @@
  </sitemap>
  <sitemap>
   <loc>http://hiranmayiduvvuri.com/sitemap.xml</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-01-05T05:40:00Z</lastmod>
  </sitemap>
 </sitemapindex>
