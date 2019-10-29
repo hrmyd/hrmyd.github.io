@@ -6,55 +6,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>http://hiranmayiduvvuri.com/</loc>
+  <lastmod>2019-10-29T03:56:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/about/</loc>
+  <lastmod>2019-10-29T03:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://hiranmayiduvvuri.com/archive.html</loc>
-  <lastmod>2019-10-29T03:33:00Z</lastmod>
+  <lastmod>2019-10-29T03:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/blog/</loc>
-  <lastmod>2019-10-29T03:33:00Z</lastmod>
+  <lastmod>2019-10-29T03:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/categories/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/categories/cat_posts/</loc>
-  <lastmod>2019-10-29T03:33:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/</loc>
-  <lastmod>2019-10-29T03:33:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/IrelandScotland/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Japan/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Nature/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Other/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/plant-tracking/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:36:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/puppy-growth/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:36:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:36:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/pytc_gui/</loc>
-  <lastmod>2019-10-29T03:34:00Z</lastmod>
+  <lastmod>2019-10-29T03:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/publications/</loc>
+  <lastmod>2019-10-29T03:56:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/resume/</loc>
+  <lastmod>2019-10-29T03:56:00Z</lastmod>
  </url>
 </urlset>
