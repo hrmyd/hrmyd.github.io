@@ -25,7 +25,7 @@ SITE_URL = "http://hiranmayiduvvuri.com/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://hrmyd.github.io/"
-BLOG_EMAIL = "hiranmayid8[REMOVE]@gmail.com"
+BLOG_EMAIL = "hiranmayi.duvvuri[REMOVE]@gmail.com"
 BLOG_DESCRIPTION = "portfolio and resume/cv"  # (translatable)
 
 # Nikola is multilingual!
@@ -830,7 +830,7 @@ GITHUB_COMMIT_SOURCE = True
 # "source/" and the results will be located in
 # "OUTPUT_PATH/relative_destination/gallery_name"
 # Default is:
-# GALLERY_FOLDERS = {"galleries": "galleries"}
+GALLERY_FOLDERS = {"galleries": "galleries"}
 # More gallery options:
 # THUMBNAIL_SIZE = 180
 # MAX_IMAGE_SIZE = 1280
@@ -1322,10 +1322,10 @@ USE_CDN_WARNING = True
 # FILE_METADATA_REGEXP = None
 
 # If enabled, extract metadata from docinfo fields in reST documents
-# USE_REST_DOCINFO_METADATA = False
+USE_REST_DOCINFO_METADATA = True
 
 # If enabled, hide docinfo fields in reST document output
-# HIDE_REST_DOCINFO = False
+HIDE_REST_DOCINFO = True
 
 # Map metadata from other formats to Nikola names.
 # Supported formats: yaml, toml, rest_docinfo, markdown_metadata

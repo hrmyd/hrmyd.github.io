@@ -9,4 +9,4 @@
 
 
 Welcome to my website! This a little bit of my portfolio website/sharing some of the things I 
-do in my spare time. When I'm not coding, I enjoy film photography and growing up my plants which I post about here!
+do in my spare time.

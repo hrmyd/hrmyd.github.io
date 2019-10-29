@@ -7,70 +7,110 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hiranmayiduvvuri.com/</loc>
-  <lastmod>2019-01-05T06:26:00Z</lastmod>
+  <lastmod>2019-10-29T03:01:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/2018/</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/2019/</loc>
-  <lastmod>2019-01-05T06:26:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/about/</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/archive%202.html</loc>
+  <lastmod>2019-10-29T02:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/archive.html</loc>
-  <lastmod>2019-01-05T06:25:00Z</lastmod>
+  <lastmod>2019-10-29T03:00:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/blog/</loc>
-  <lastmod>2019-01-05T06:26:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/categories/</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/categories/cat_posts/</loc>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/categories/index%202.html</loc>
+  <lastmod>2019-10-29T02:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/</loc>
-  <lastmod>2019-01-05T05:48:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/IrelandScotland/</loc>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/IrelandScotland/index%202.html</loc>
+  <lastmod>2019-10-29T02:58:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/Ireland_Scotland/</loc>
+  <lastmod>2019-10-29T02:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/Ireland_Scotland/index%202.html</loc>
+  <lastmod>2019-10-29T01:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Japan/</loc>
-  <lastmod>2019-01-05T05:42:00Z</lastmod>
+  <lastmod>2019-10-29T03:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/Japan/index%202.html</loc>
+  <lastmod>2019-10-29T02:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Nature/</loc>
-  <lastmod>2019-01-05T05:42:00Z</lastmod>
+  <lastmod>2019-10-29T03:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/Nature/index%202.html</loc>
+  <lastmod>2019-10-29T01:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/galleries/Other/</loc>
-  <lastmod>2019-01-05T05:48:00Z</lastmod>
+  <lastmod>2019-10-29T03:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/galleries/Other/index%202.html</loc>
+  <lastmod>2019-10-29T01:47:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/plant-tracking/</loc>
-  <lastmod>2019-01-05T06:26:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/posts/puppy-growth/</loc>
-  <lastmod>2019-01-05T06:26:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/</loc>
-  <lastmod>2018-07-08T22:29:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/pytc_gui/</loc>
-  <lastmod>2018-07-08T03:27:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/publications/</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/resume/</loc>
-  <lastmod>2019-01-05T05:03:00Z</lastmod>
+  <lastmod>2019-10-29T03:02:00Z</lastmod>
  </url>
 </urlset>
