@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html prefix="
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Hiranmayi Duvvuri · Playing with Tic Tac Toe </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.css" integrity="sha256-GrjD69ygFQ+lWqlAOC6LzoNUE4jKrvgkQJrtIukHAi4=" crossorigin="anonymous">
+<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
+<meta content="#838383" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://hiranmayiduvvuri.com/posts/playing-with-tic-tac-toe/">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><meta name="author" content="Hiranmayi Duvvuri">
+<link rel="prev" href="../puppy-growth/" title="Puppy Growth" type="text/html">
+</head>
+<body class="">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    <div class="hsidebar">
+        <div class="container sidebar-sticky">
+            <div class="sidebar-about">
+              <h1>
+                <a href="http://hiranmayiduvvuri.com/">
+                      <h1 id="brand"><a href="http://hiranmayiduvvuri.com/" title="Hiranmayi Duvvuri" rel="home">
+
+        <span id="blog-title">Hiranmayi Duvvuri</span>
+    </a></h1>
+
+                </a>
+              </h1>
+                <p class="lead">portfolio and resume/cv</p>
+
+            </div>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../about/">About</a>
+        <a class="sidebar-nav-item" href="../../resume/">Resume</a>
+        <a class="sidebar-nav-item" href="../../projects/">Projects</a>
+        <a class="sidebar-nav-item" href="../../publications/">Publications</a>
+        <a class="sidebar-nav-item" href="../../galleries/">Photography</a>
+        <a class="sidebar-nav-item" href="../../blog/">Blog</a>
+    
+    
+    </nav><footer id="footer"><span class="copyright">
+                  <div>
+        <a class="small_links" href="https://www.linkedin.com/in/hrnmy/" alt="LinkedIn"><img class="socialmedia" src="../../images/linkedin.png"></a>
+        <a class="small_links" href="https://github.com/hrmyd/" alt="Github"><img class="socialmedia" src="../../images/github.png"></a>
+        <a class="small_links" href="https://twitter.com/hduvvuri8" alt="Twitter"><img class="socialmedia" src="../../images/twitter.png"></a>
+        <a class="small_links" href="https://www.instagram.com/hrnmy/" alt="Instagram"><img class="socialmedia" src="../../images/instagram.png"></a>
+        <a class="small_links" href="https://www.flickr.com/photos/hrnmyd/" alt="Flickr"><img class="socialmedia" src="../../images/flickr.png"></a>
+    </div>
+
+              Contents © 2020         <a href="mailto:hiranmayi.duvvuri%5BREMOVE%5D@gmail.com">Hiranmayi Duvvuri</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            </span>
+            
+            
+        </footer>
+</div>
+    </div>
+
+    <div class="content container" id="content">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">Playing with Tic Tac Toe</a></h1>
+
+    <span class="post-date">
+      <time class="published dt-published" datetime="2020-03-21T15:59:57-07:00" itemprop="datePublished" title="2020-03-21">2020-03-21</time></span>
+
+    
+    
+
+    <div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Tic-Tac-Toe">Tic Tac Toe<a class="anchor-link" href="#Tic-Tac-Toe">¶</a>
+</h3>
+<h4 id="Goals">Goals<a class="anchor-link" href="#Goals">¶</a>
+</h4>
+<p>With this, my main goal was to mess around with both using straight numpy to build a basic tic tac toe agent as well as to learn more about qlearning as well. <a href="https://www.freecodecamp.org/news/an-introduction-to-q-learning-reinforcement-learning-14ac0b4493cc/">This article</a> helped me with getting started with the basics.</p>
+<p>This was about a day long project to help get started and next steps are to make this user friendly and deploy this outside of a notebook environment! Cause let's be honest, these aren't super user friendly.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Agent-Class">Agent Class<a class="anchor-link" href="#Agent-Class">¶</a>
+</h4>
+<p>the main event of all this! each agent is set up to track moves taken over the course of the game and at the end, use <code>reward</code> to update the states throughout the game and update the reward function for that game based on the outcome.</p>
+<p>Using Bellman Equation:</p>
+<p>$\epsilon$: exploration rate - chance that a random move is taken vs best move.<br>
+$\alpha$: learning rate - basically weights everything and how much impact each reward function has.<br>
+$\gamma$: discount factor - acting to weight the impact the future reward has.</p>
+$$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in code:</p>
+<p><code>self.states[move] += self.lr * (self.discount_factor * reward - self.states[move])</code></p>
+<p>which can definitely be easier to read :)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Agent</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">exp_rate</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">discount_factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    initialize a player and associated symbol.</span>
+<span class="sd">    learning rate,</span>
+<span class="sd">    exploration rate,</span>
+<span class="sd">    discount factor</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">exp_rate</span> <span class="o">=</span> <span class="n">exp_rate</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">discount_factor</span> <span class="o">=</span> <span class="n">discount_factor</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">states</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">moves_taken</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">def</span> <span class="nf">_get_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">hash</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="nb">hash</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">:</span>
+      <span class="n">values</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="nb">hash</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">values</span>
+
+  <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    choose next move</span>
+<span class="sd">    """</span>
+    <span class="n">explore</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_rate</span>
+    <span class="n">avail_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">board</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">next_move</span> <span class="o">=</span> <span class="kc">None</span>
+    
+    <span class="k">if</span> <span class="n">explore</span><span class="p">:</span> <span class="c1"># look through all available positions and find best move</span>
+      <span class="n">max_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">999</span>
+      <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">avail_idx</span><span class="p">:</span>
+        <span class="n">next_board</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+        <span class="n">next_board</span><span class="o">.</span><span class="n">update_board</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
+        <span class="n">board_hash</span> <span class="o">=</span> <span class="n">next_board</span><span class="o">.</span><span class="n">get_hash</span><span class="p">()</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values</span><span class="p">(</span><span class="n">board_hash</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">max_value</span><span class="p">:</span>
+          <span class="n">max_value</span> <span class="o">=</span> <span class="n">value</span>
+          <span class="n">next_move</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">pos_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">avail_idx</span><span class="p">))</span>
+      <span class="n">next_move</span> <span class="o">=</span> <span class="n">avail_idx</span><span class="p">[</span><span class="n">pos_idx</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">next_move</span>
+
+  <span class="k">def</span> <span class="nf">update_move_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board_hash</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    add move to front of the list.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">moves_taken</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">board_hash</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reward</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    update rewards at end of game for each state.</span>
+
+<span class="sd">    Q(S,A)= Q(S,A)+α∗(γ∗maxaQ(S′,a)− Q(S,A))</span>
+<span class="sd">    """</span>
+    <span class="c1"># move history is reversed, reward is reward for the next move taken</span>
+    <span class="k">for</span> <span class="n">move</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">moves_taken</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">move</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="n">move</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="n">move</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">discount_factor</span> <span class="o">*</span> <span class="n">reward</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="n">move</span><span class="p">])</span>
+      <span class="n">reward</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="n">move</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">moves_taken</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Player-class">Player class<a class="anchor-link" href="#Player-class">¶</a>
+</h4>
+<p>A super basic class to hold the players moves and check for a win.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+
+  <span class="k">def</span> <span class="nf">make_move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">update_board</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
+
+    <span class="n">board</span><span class="o">.</span><span class="n">str_rep</span><span class="p">()</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">check_win</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Gameboard">Gameboard<a class="anchor-link" href="#Gameboard">¶</a>
+</h4>
+<p>You can't play tic-tac-toe without a gameboard! And we definitely want to make sure the board has some basic representation so you don't have to keep track of a numpy array while playing.</p>
+<p>Some basic functions we want:</p>
+<ol>
+<li>make the board! and track player symbols</li>
+<li>track what moves each players makes and update that symbol appropriately.</li>
+<li>get gameboard hash. the way the agent tracks what moves it has made is by storing a flattened, string representation of the gameboard at that time. we'll have the gameboard class itself take care of this.</li>
+<li>who won? after every move we want to check if anyone won or if there was a tie. the agent won't really learn anything if it never knows what the outcome was.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Gameboard</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_cols</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">n_rows</span> <span class="o">=</span> <span class="n">n_rows</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">n_cols</span> <span class="o">=</span> <span class="n">n_cols</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">n_rows</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_cols</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">symbols</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">" "</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">"X"</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="s2">"O"</span><span class="p">}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">symbols_rev</span> <span class="o">=</span> <span class="p">{</span><span class="s2">" "</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"X"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"O"</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">draw</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">hash</span> <span class="o">=</span> <span class="kc">None</span>
+
+  <span class="k">def</span> <span class="nf">str_rep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    string representation of array, with symbols</span>
+<span class="sd">    """</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_rows</span><span class="p">):</span>
+      <span class="n">row</span> <span class="o">=</span> <span class="s2">"|"</span>
+      <span class="n">header</span> <span class="o">=</span> <span class="s2">"|"</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_cols</span><span class="p">):</span>
+        <span class="n">header</span> <span class="o">+=</span> <span class="s2">"---|"</span>
+        <span class="n">row</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">" {self.symbols[self.board[i, j]]} |"</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">get_hash</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    basically, return flattened view of board</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">hash</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash</span>
+
+  <span class="k">def</span> <span class="nf">update_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">sym</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    update array with int representation of symbol if position is valid.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sym</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+      <span class="n">sym</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbols_rev</span><span class="p">[</span><span class="n">sym</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">sym</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"move not valid, space not empty"</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">check_win</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win_score</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    check diagonals, rows, and columns for win_score (+ or -) or draw.</span>
+<span class="sd">    """</span>
+    <span class="n">left_diag_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">))</span>
+    <span class="n">right_diag_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+
+    <span class="n">row_sums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">col_sums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">x_win</span> <span class="o">=</span>  <span class="n">win_score</span>
+    <span class="n">o_win</span> <span class="o">=</span> <span class="n">win_score</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># check if x wins</span>
+    <span class="k">if</span> <span class="n">x_win</span> <span class="ow">in</span> <span class="n">row_sums</span> <span class="ow">or</span> <span class="n">x_win</span> <span class="ow">in</span> <span class="n">col_sums</span> <span class="ow">or</span> <span class="n">x_win</span> <span class="ow">in</span> <span class="p">[</span><span class="n">left_diag_score</span><span class="p">,</span> <span class="n">right_diag_score</span><span class="p">]:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="o">=</span> <span class="mi">1</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"game over, X wins"</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="c1"># check if o wins</span>
+    <span class="k">if</span> <span class="n">o_win</span> <span class="ow">in</span> <span class="n">row_sums</span> <span class="ow">or</span> <span class="n">o_win</span> <span class="ow">in</span> <span class="n">col_sums</span> <span class="ow">or</span> <span class="n">o_win</span> <span class="ow">in</span> <span class="p">[</span><span class="n">left_diag_score</span><span class="p">,</span> <span class="n">right_diag_score</span><span class="p">]:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"game over, O wins"</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="c1"># check if draw</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"game over, draw"</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">return</span> <span class="kc">False</span>
+
+  <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    back to square one</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">n_rows</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_cols</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">draw</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">hash</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Helper-functions">Helper functions<a class="anchor-link" href="#Helper-functions">¶</a>
+</h4>
+<p>A couple functions to help with training as well as having the agent make a move when a person is playing against it.</p>
+<p>To train, it's basically just set up to have two agents play against eachother for <code>x</code> rounds, and to appropriately check, update, and award each agent.</p>
+<p>after this, it's time to play :)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_agent</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="n">rounds</span><span class="p">):</span>
+  <span class="n">player1_wins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">rounds</span><span class="p">)</span>
+  <span class="n">player2_wins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">rounds</span><span class="p">)</span>
+
+  <span class="n">win_score</span> <span class="o">=</span> <span class="mi">3</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rounds</span><span class="p">):</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="n">Gameboard</span><span class="p">()</span>
+    <span class="n">symbol_map</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">symbols</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"starting round {i+1}"</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="p">[</span><span class="n">player1</span><span class="p">,</span> <span class="n">player2</span><span class="p">]:</span>
+        <span class="n">move</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+        <span class="n">board</span><span class="o">.</span><span class="n">update_board</span><span class="p">(</span><span class="n">move</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">move</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">symbol_map</span><span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">symbol</span><span class="p">])</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">update_move_history</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">get_hash</span><span class="p">())</span>
+        <span class="n">winner</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">check_win</span><span class="p">(</span><span class="n">win_score</span><span class="p">)</span>
+
+        <span class="c1"># in case player one fills last spot</span>
+        <span class="k">if</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+          <span class="k">break</span>
+
+    <span class="k">if</span> <span class="n">winner</span> <span class="ow">and</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="o">==</span> <span class="n">player1</span><span class="o">.</span><span class="n">symbol</span><span class="p">:</span>
+      <span class="n">player1</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">player2</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">player1_wins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">winner</span> <span class="ow">and</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="o">==</span> <span class="n">player2</span><span class="o">.</span><span class="n">symbol</span><span class="p">:</span>
+      <span class="n">player1</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">player2</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">player2_wins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">winner</span> <span class="ow">and</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">player1</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">player2</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">player1</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">player2</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+  <span class="k">return</span> <span class="n">player1_wins</span><span class="p">,</span> <span class="n">player2_wins</span>
+
+<span class="k">def</span> <span class="nf">agent_move</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">move</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">update_board</span><span class="p">(</span><span class="n">move</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">move</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">player</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">update_move_history</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">get_hash</span><span class="p">())</span>
+
+  <span class="n">board</span><span class="o">.</span><span class="n">str_rep</span><span class="p">()</span>
+  <span class="n">win</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">check_win</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">win</span> <span class="ow">and</span> <span class="n">board</span><span class="o">.</span><span class="n">winner</span> <span class="o">==</span> <span class="n">player</span><span class="o">.</span><span class="n">symbol</span><span class="p">:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Let's-Play!">Let's Play!<a class="anchor-link" href="#Let's-Play!">¶</a>
+</h3>
+<h4 id="Training">Training<a class="anchor-link" href="#Training">¶</a>
+</h4>
+<p>Starting out by training two agents to play against each other. For initial training going for 100 rounds before playing with first agent.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player1</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">player2</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">symbol</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">p1_wins</span><span class="p">,</span> <span class="n">p2_wins</span> <span class="o">=</span> <span class="n">train_agent</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p2_wins</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[0]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3148.0, 1375.0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p2_wins</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[0]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.6959982312624364</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Me-vs-Agent">Me vs Agent<a class="anchor-link" href="#Me-vs-Agent">¶</a>
+</h4>
+<p>currently pretty manual process. planning to automate this and set something up for player to actually play against the agent and more than just a string represented gameboard.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">symbol</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">game</span> <span class="o">=</span> <span class="n">Gameboard</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|---|---|---|
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|---|---|---|
+| X |   |   |
+|---|---|---|
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|---|---|---|
+|   |   |   |
+|---|---|---|
+| O |   |   |
+|---|---|---|
+| X |   |   |
+|---|---|---|
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|---|---|---|
+|   |   |   |
+|---|---|---|
+| O |   |   |
+|---|---|---|
+| X |   | X |
+|---|---|---|
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|---|---|---|
+|   |   |   |
+|---|---|---|
+| O | O |   |
+|---|---|---|
+| X |   | X |
+|---|---|---|
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|---|---|---|
+|   |   |   |
+|---|---|---|
+| O | O |   |
+|---|---|---|
+| X | X | X |
+|---|---|---|
+game over, X wins
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><div class="pager hidden-print pagination">
+
+            <span class="previous pagination-item older">
+                <a href="../puppy-growth/" rel="prev" title="Puppy Growth">
+                Previous post
+                </a>
+            </span>
+
+
+            <span class="next pagination-item newer">
+Next post
+            </span>
+
+        </div>
+
+    </nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article>
+</div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.js" integrity="sha256-SoEATAB7PgNWyyK100I7yQXYm5V08k5SFupDP0h72MY=" crossorigin="anonymous"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.js" integrity="sha256-SoEATAB7PgNWyyK100I7yQXYm5V08k5SFupDP0h72MY=" crossorigin="anonymous"></script>
+</body>
+</html>
