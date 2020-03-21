@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hiranmayiduvvuri.com/</loc>
-  <lastmod>2019-10-29T03:57:00Z</lastmod>
+  <lastmod>2020-03-21T23:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/about/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/archive.html</loc>
-  <lastmod>2019-10-29T03:50:00Z</lastmod>
+  <lastmod>2020-03-21T23:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/blog/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/categories/</loc>
-  <lastmod>2019-10-29T03:51:00Z</lastmod>
+  <lastmod>2020-03-21T23:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/categories/cat_posts/</loc>
@@ -54,16 +54,20 @@
   <lastmod>2019-10-29T03:57:00Z</lastmod>
  </url>
  <url>
+  <loc>http://hiranmayiduvvuri.com/posts/playing-with-tic-tac-toe/</loc>
+  <lastmod>2020-03-21T23:05:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://hiranmayiduvvuri.com/posts/puppy-growth/</loc>
   <lastmod>2019-10-29T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/</loc>
-  <lastmod>2019-10-29T03:57:00Z</lastmod>
+  <lastmod>2019-10-29T04:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/projects/pytc_gui/</loc>
-  <lastmod>2019-10-29T03:57:00Z</lastmod>
+  <lastmod>2019-10-29T04:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://hiranmayiduvvuri.com/publications/</loc>
@@ -72,5 +76,9 @@
  <url>
   <loc>http://hiranmayiduvvuri.com/resume/</loc>
   <lastmod>2019-10-29T03:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hiranmayiduvvuri.com/talks/</loc>
+  <lastmod>2020-03-21T23:05:00Z</lastmod>
  </url>
 </urlset>
