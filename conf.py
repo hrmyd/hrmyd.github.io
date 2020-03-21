@@ -139,6 +139,7 @@ NAVIGATION_LINKS = {
         ("/resume/", "Resume"),
         ("/projects/", "Projects"),
         ("/publications/", "Publications"),
+        ("/talks/", "Talks"),
         ("/galleries/", "Photography"),
         ("/blog/", "Blog"),
     ),
