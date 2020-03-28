@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 /*
-	Copyright © 2014-2019 Daniel Aleksandersen and others.
-
+	Copyright © 2014-2020 Daniel Aleksandersen and others.
 	Permission is hereby granted, free of charge, to any
 	person obtaining a copy of this software and associated
 	documentation files (the "Software"), to deal in the
@@ -11,11 +10,9 @@
 	distribute, sublicense, and/or sell copies of the
 	Software, and to permit persons to whom the Software is
 	furnished to do so, subject to the following conditions:
-
 	The above copyright notice and this permission notice
 	shall be included in all copies or substantial portions of
 	the Software.
-
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
 	KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
 	WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
@@ -67,9 +64,9 @@ body {
 	margin-right: 1.5em;
 }
 
-#menu ul li:dir(rtl),
-#toptranslations ul li:dir(rtl),
-#toptranslations h2:dir(rtl) {
+html[dir="rtl"] #menu ul li,
+html[dir="rtl"] #toptranslations ul li,
+html[dir="rtl"] #toptranslations h2 {
 	margin-left: 1.5em;
 	margin-right: 0;
 }
@@ -79,7 +76,7 @@ body {
 	float: right;
 }
 
-#toptranslations:dir(rtl) {
+html[dir="rtl"] #toptranslations {
 	text-align: left;
 	float: left;
 }
@@ -140,19 +137,24 @@ body {
 .archivenav .pager .next:after {
 	content: " →";
 }
-.postpromonav .pager .previous:dir(rtl):after,
-.archivenav .pager .previous:dir(rtl):after {
+html[dir="rtl"] .postpromonav .pager .previous:after,
+html[dir="rtl"] .archivenav .pager .previous:after {
 	content: " →";
 }
 .postpromonav .pager .previous:before,
 .archivenav .pager .previous:before {
 	content: "← ";
 }
-.postpromonav .pager .next:dir(rtl):before,
-.archivenav .pager .next:dir(rtl):before {
+html[dir="rtl"] .postpromonav .pager .next:before,
+html[dir="rtl"] .archivenav .pager .next:before {
 	content: "← ";
 }
-
+html[dir="rtl"] .postpromonav .pager .next:after,
+html[dir="rtl"] .archivenav .pager .next:after,
+html[dir="rtl"] .postpromonav .pager .previous:before,
+html[dir="rtl"] .archivenav .pager .previous:before {
+	content: "";
+}
 .metadata p:first-of-type:before,
 .postpromonav .tags li:first-of-type:before,
 .translationslist p:first-of-type:before {
@@ -174,8 +176,8 @@ body {
 .archivenav .pager .next {
 	float: right;
 }
-.postpromonav .pager .next:dir(rtl),
-.archivenav .pager .next:dir(rtl) {
+html[dir="rtl"] .postpromonav .pager .next,
+html[dir="rtl"] .archivenav .pager .next {
 	float: left;
 }
 
@@ -183,16 +185,16 @@ body {
 .archivenav .pager .previous {
 	float: left;
 }
-.postpromonav .pager .previous:dir(rtl),
-.archivenav .pager .previous:dir(rtl) {
+html[dir="rtl"] .postpromonav .pager .previous,
+html[dir="rtl"] .archivenav .pager .previous {
 	float: right;
 }
 
 .archivenav .pager .disabled,
 .archivenav .pager .disabled a,
 .archivenav .pager .disabled:link {
-    color: #888;
-    cursor: not-allowed;
+	color: #888;
+	cursor: not-allowed;
 }
 
 .metadata p,
@@ -207,14 +209,14 @@ body {
 
 /* Links */
 :link {
-	color: #1168CC;
+	color: #444;
 	text-decoration: none;
 }
 :visited {
-	color: #6830BB;
+	color: #444;
 }
 :link:hover, :visited:hover {
-	color: #0d53a3;
+	color: #444;
 }
 
 #brand :link,
@@ -225,7 +227,8 @@ body {
 /* Images */
 img {
 	border: none;
-	line-height: 1;
+    line-height: 1;
+    border-radius: 10px;
 }
 
 .postpage img,
@@ -233,7 +236,8 @@ img {
 .postindex article img,
 .postindex article object {
 	height: auto;
-	max-width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 /* Comment helpers */
@@ -265,16 +269,19 @@ img {
 
 .thumbnails {
 	list-style: none;
-	padding: 0;
+    padding: 0;
+    border-radius: 10px;
 }
 
 .thumbnails > li {
 	display: inline-block;
-	margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 .thumbnails > li:last-of-type {
-	margin-right: 0;
+    margin-right: 0;
+    border-radius: 10px;
 }
 
 .codetable .linenos {
