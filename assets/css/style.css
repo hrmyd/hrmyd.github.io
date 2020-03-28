@@ -475,7 +475,9 @@ blockquote:before,
     position: absolute
 }
 strong,
-b,
+b{
+    background: #fff;
+}
 em {
     padding: 1px 2px;
     font-weight: normal
