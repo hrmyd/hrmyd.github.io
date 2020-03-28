@@ -15,6 +15,6 @@ Welcome to my website! This a little bit of my portfolio website/sharing some of
 
 Check out some of the projects I've worked on!
 
-Currently on rounding out some actual DS projects to be posted soon. 
+Currently working on rounding out some actual DS projects to be posted soon. 
 
 As someone who greatly enjoys non-tech hobbies as well, I always love showing those off! I've been trying to track my knitting and sewing on instagram. <a href="https://www.instagram.com/hermknits/">Check out my crafting work here!</a>
