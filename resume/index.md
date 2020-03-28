@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-PDF download: [Resume](files/hiranmayi-cv.pdf>).
+PDF download: [Resume](files/hiranmayi-cv.pdf).
 
 <h1 class="resume"> Summary </h1>
 
