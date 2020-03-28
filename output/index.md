@@ -17,4 +17,4 @@ Check out some of the projects I've worked on!
 
 Currently working on rounding out some actual DS projects to be posted soon. 
 
-As someone who greatly enjoys non-tech hobbies as well, I always love showing those off! I've been trying to track my knitting and sewing on instagram. <a href="https://www.instagram.com/hermknits/">Check out my crafting work here!</a>
+As someone who greatly enjoys non-tech hobbies as well, I always love showing those off! I've been trying to track my knitting and sewing on instagram. <a href="https://www.instagram.com/hermknits/" target="_blank">Check out my crafting work here!</a>
