@@ -135,13 +135,15 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/", "Home"),
         ("/about/", "About"),
+        ("/blog/", "Blog"),
         ("/resume/", "Resume"),
-        ("/projects/", "Projects"),
         ("/publications/", "Publications"),
         ("/talks/", "Talks"),
         ("/galleries/", "Photography"),
-        ("/blog/", "Blog"),
+        ("https://github.com/hrmyd/", "Github"),
+        ("https://www.linkedin.com/in/hrnmy/", "LinkedIn")
     ),
 }
 
@@ -156,7 +158,7 @@ SOCIAL_MEDIA = {
 }
 
 # Name of the theme to use.
-THEME = "hyde"
+THEME = "maupassant"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -165,7 +167,7 @@ THEME_COLOR = '#838383'
 # Determines how the formulae are rendered. Possibilities:
 #  - "latex_formula_image_renderer": renders formulae as graphics and includes them.
 #  - "latex_formula_mathjax": inserts MathJax code.
-LATEX_FORMULA_RENDERER = "latex_formula_image_renderer"
+LATEX_FORMULA_RENDERER = "latex_formula_mathjax"
 
 # When "latex_formula_image_renderer" is selected as the formula renderer,
 # the formulae colors and scale can be set here:
@@ -1130,21 +1132,21 @@ PRETTY_URLS = True
 
 # If you want support for the $.$ syntax (which may conflict with running
 # text!), just use this config:
-# MATHJAX_CONFIG = """
-# <script type="text/x-mathjax-config">
-# MathJax.Hub.Config({
-#     tex2jax: {
-#         inlineMath: [ ['$','$'], ["\\\(","\\\)"] ],
-#         displayMath: [ ['$$','$$'], ["\\\[","\\\]"] ],
-#         processEscapes: true
-#     },
-#     displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
-#     "HTML-CSS": {
-#         styles: {'.MathJax_Display': {"margin": 0}}
-#     }
-# });
-# </script>
-# """
+MATHJAX_CONFIG = """
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\\(","\\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\\[","\\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+"""
 
 # Want to use KaTeX instead of MathJax? While KaTeX may not support every
 # feature yet, it's faster and the output looks better.

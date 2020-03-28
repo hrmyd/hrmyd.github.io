@@ -8,8 +8,8 @@
 .. type: text
 
 .. image:: /images/me.jpg
-    :align: left
-    :width: 30%
+    :align: center
+    :width: 40%
 
 University of Oregon alumni living in Portland, OR. I graduated with a degree in Biochemistry and became interested in programming towards the end of school.
 I worked in two molecular biology labs where I combined biology and computer science for analysis of various experiments. 
