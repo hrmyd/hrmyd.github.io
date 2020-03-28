@@ -19,7 +19,7 @@ In my most recent position, I was a **Data Scientist** at Vacasa where I was the
 <h1 class="resume">Experience</h1>
 
 <p style="text-align:left;">
-    <b>Vacasa</b>
+    <b style="font-size:130%">Vacasa</b>
     <span style="float:right;">
         <i>2017 - 2020</i>
     </span>
@@ -31,9 +31,11 @@ In my most recent position, I was a **Data Scientist** at Vacasa where I was the
 
 :    During time as an analyst, I utilized my python skills to aid in automating data analysis as well as exploring owner churn. I worked closely with the operations department at this time and maintained those relationships when transitioning to data science.  
 :    While on the data science team, I worked on multiple projects with high impact for the company. I worked both with operations, digital, as well as core projects meant to help all members of the team/across all departments.
+:   Unfortunately position was affected by COVID-19
+
 
 <p style="text-align:left;">
-    <b>University of Oregon Institute of Molecular Biology</b>
+    <b style="font-size:130%">University of Oregon Institute of Molecular Biology</b>
     <span style="float:right;">
         <i>2015 - 2017</i>
     </span>
