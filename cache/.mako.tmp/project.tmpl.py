@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1585369089.709603
+_modified_time = 1585369229.228086
 _enable_loop = True
 _template_filename = '/Users/hrnmy/Documents/Projects/hrmyd.github.io/plugins/projectpages/templates/mako/project.tmpl'
 _template_uri = 'project.tmpl'
@@ -31,12 +31,12 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         title = context.get('title', UNDEFINED)
-        project_index = context.get('project_index', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        post = context.get('post', UNDEFINED)
         project = _mako_get_namespace(context, 'project')
+        project_index = context.get('project_index', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -53,12 +53,12 @@ def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         title = context.get('title', UNDEFINED)
-        project_index = context.get('project_index', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         def content():
             return render_content(context)
+        post = context.get('post', UNDEFINED)
         project = _mako_get_namespace(context, 'project')
+        project_index = context.get('project_index', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <header class="page-header">\n        <h1>')
         __M_writer(str(title))
