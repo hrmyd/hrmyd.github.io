@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1585367574.510688
+_modified_time = 1585369089.4891672
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/base_helper.tmpl'
 _template_uri = 'base_helper.tmpl'
@@ -33,32 +33,32 @@ def render_body(context,**pageargs):
 def render_html_headstart(context):
     __M_caller = context.caller_stack._push_frame()
     try:
+        abs_link = context.get('abs_link', UNDEFINED)
+        comment_system = context.get('comment_system', UNDEFINED)
+        use_base_tag = context.get('use_base_tag', UNDEFINED)
+        comment_system_id = context.get('comment_system_id', UNDEFINED)
+        nextlink = context.get('nextlink', UNDEFINED)
+        twitter_card = context.get('twitter_card', UNDEFINED)
+        url_type = context.get('url_type', UNDEFINED)
         mathjax_config = context.get('mathjax_config', UNDEFINED)
-        is_rtl = context.get('is_rtl', UNDEFINED)
+        use_open_graph = context.get('use_open_graph', UNDEFINED)
         title = context.get('title', UNDEFINED)
         def html_feedlinks():
             return render_html_feedlinks(context)
-        favicons = context.get('favicons', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        prevlink = context.get('prevlink', UNDEFINED)
         blog_title = context.get('blog_title', UNDEFINED)
-        theme_color = context.get('theme_color', UNDEFINED)
-        abs_link = context.get('abs_link', UNDEFINED)
-        use_open_graph = context.get('use_open_graph', UNDEFINED)
-        url_replacer = context.get('url_replacer', UNDEFINED)
+        description = context.get('description', UNDEFINED)
+        extra_head_data = context.get('extra_head_data', UNDEFINED)
+        favicons = context.get('favicons', UNDEFINED)
         meta_generator_tag = context.get('meta_generator_tag', UNDEFINED)
-        use_base_tag = context.get('use_base_tag', UNDEFINED)
         permalink = context.get('permalink', UNDEFINED)
-        nextlink = context.get('nextlink', UNDEFINED)
         def html_stylesheets():
             return render_html_stylesheets(context)
-        url_type = context.get('url_type', UNDEFINED)
-        extra_head_data = context.get('extra_head_data', UNDEFINED)
-        twitter_card = context.get('twitter_card', UNDEFINED)
-        comment_system = context.get('comment_system', UNDEFINED)
         use_cdn = context.get('use_cdn', UNDEFINED)
-        description = context.get('description', UNDEFINED)
-        comment_system_id = context.get('comment_system_id', UNDEFINED)
+        is_rtl = context.get('is_rtl', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
+        theme_color = context.get('theme_color', UNDEFINED)
+        url_replacer = context.get('url_replacer', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<!DOCTYPE html>\n<html\n')
         if use_open_graph or (twitter_card and twitter_card['use_twitter_cards']) or (comment_system == 'facebook'):
@@ -190,9 +190,9 @@ def render_html_navigation_links(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         navigation_links = context.get('navigation_links', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
         rel_link = context.get('rel_link', UNDEFINED)
         permalink = context.get('permalink', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         for url, text in navigation_links[lang]:
@@ -216,13 +216,13 @@ def render_html_navigation_links(context):
 def render_html_feedlinks(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        len = context.get('len', UNDEFINED)
-        sorted = context.get('sorted', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        translations = context.get('translations', UNDEFINED)
-        generate_atom = context.get('generate_atom', UNDEFINED)
         generate_rss = context.get('generate_rss', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
         rss_link = context.get('rss_link', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
+        sorted = context.get('sorted', UNDEFINED)
+        generate_atom = context.get('generate_atom', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if rss_link:
@@ -261,12 +261,12 @@ def render_html_feedlinks(context):
 def render_html_translations(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        sorted = context.get('sorted', UNDEFINED)
+        abs_link = context.get('abs_link', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
+        sorted = context.get('sorted', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
-        abs_link = context.get('abs_link', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         for langname in sorted(translations):
