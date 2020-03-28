@@ -3,13 +3,13 @@
     width: auto;
     height: auto;
     display: inline-block;
-  }
+}
   
-  .small_links {
+.small_links {
     display: inline-block;
     width: 32px;
     height: 32x;
-  }
+}
 
 body {
     background-color: #fff;
