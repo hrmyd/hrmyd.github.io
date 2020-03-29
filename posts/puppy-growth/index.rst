@@ -9,6 +9,8 @@
 
 When you get a new puppy, it's easy to not see how quickly they're growing until you look at some pictures!
 
+.. TEASER_END
+
 Quick Growth!
 =============
 
