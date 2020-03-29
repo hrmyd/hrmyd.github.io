@@ -51,11 +51,14 @@ TO DO
 
 <h1 class="resume">Skillset</h1>
 **Programming**
-:   Super basic HTML and CSS ¯\\\_(ツ)_/¯ 
-
+:   Python, SQL, Git, Bash
+Super basic HTML and CSS ¯\\\_(ツ)_/¯ 
 
 **Data Science**
-:   Skillz
+:   Pandas/GeoPandas, Dask, NumPy, Sci-kit Learn, Keras, OpenCV
+
+**Other**
+:   AWS, GCP, Docker
 
 <h1 class="resume">Education</h1>
 <p style="text-align:left;">
