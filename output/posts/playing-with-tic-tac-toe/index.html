@@ -95,7 +95,7 @@ MathJax.Hub.Config({
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
@@ -122,7 +122,7 @@ MathJax.Hub.Config({
 <p>$\epsilon$: exploration rate - chance that a random move is taken vs best move.<br>
 $\alpha$: learning rate - basically weights everything and how much impact each reward function has.<br>
 $\gamma$: discount factor - acting to weight the impact the future reward has.</p>
-$$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in code:</p>
+$$Q(S, A) = Q(S, A) + \alpha * (\gamma * reward - Q(S, A))$$<p>or in code:</p>
 <p><code>self.states[move] += self.lr * (self.discount_factor * reward - self.states[move])</code></p>
 <p>which can definitely be easier to read :)</p>
 
@@ -131,7 +131,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Agent</span><span class="p">:</span>
@@ -228,7 +228,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
@@ -267,7 +267,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Gameboard</span><span class="p">:</span>
@@ -379,7 +379,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_agent</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="n">rounds</span><span class="p">):</span>
@@ -458,7 +458,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">player1</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -474,7 +474,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p2_wins</span><span class="p">)</span>
@@ -490,7 +490,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[0]:</div>
+    <div class="prompt output_prompt">Out[ ]:</div>
 
 
 
@@ -507,7 +507,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p1_wins</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p2_wins</span><span class="p">))</span>
@@ -523,7 +523,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[0]:</div>
+    <div class="prompt output_prompt">Out[ ]:</div>
 
 
 
@@ -552,7 +552,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">symbol</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
@@ -566,7 +566,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
@@ -603,7 +603,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
@@ -640,7 +640,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
@@ -677,7 +677,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
@@ -714,7 +714,7 @@ $$Q_{t+1}(s, a) = Q_{t}(s, a) + \alpha * (\gamma * reward - Q_t(s, a))$$<p>or in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent_move</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span> <span class="n">game</span><span class="p">)</span>
@@ -752,7 +752,7 @@ game over, X wins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
