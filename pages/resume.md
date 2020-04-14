@@ -51,7 +51,7 @@ TO DO
 
 <h1 class="resume">Skillset</h1>
 **Programming**
-:   Python, SQL, Git, Bash
+:   Python, SQL, Git, Bash  
 Super basic HTML and CSS ¯\\\_(ツ)_/¯ 
 
 **Data Science**

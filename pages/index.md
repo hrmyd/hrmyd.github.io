@@ -15,9 +15,4 @@ Welcome to my website! This a little bit of my portfolio website/sharing some of
 
 Check out some of the projects I've worked on!
 
-## tech projects
-
-
-## non-tech projects
-
-
+IN PROGRESS
