@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adventures in Web Apps - Pt 1 | Hiranmayi Duvvuri</title>
+<link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
+<link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
+<link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#838383">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://hiranmayiduvvuri.com/posts/adventures-in-web-apps/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><meta name="author" content="Hiranmayi Duvvuri">
+<link rel="prev" href="../playing-with-tic-tac-toe/" title="Playing with Tic Tac Toe" type="text/html">
+<meta property="og:site_name" content="Hiranmayi Duvvuri">
+<meta property="og:title" content="Adventures in Web Apps - Pt 1">
+<meta property="og:url" content="http://hiranmayiduvvuri.com/posts/adventures-in-web-apps/">
+<meta property="og:description" content="With quarantines and lay offs, I thought this would be a great time to take my little tic tac toe project to a real live app! Since playing in a jupyter notebook isn't nearly as fun as attempting to u">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-04-17T11:43:07-07:00">
+</head>
+<body>
+<div class="body_container">
+    <div id="header">
+        <div class="site-name">
+                <h1>Hiranmayi Duvvuri</h1>
+        </div>
+
+        <div id="nav-menu">
+            <div class="bitcron_nav_container">
+                <div class="bitcron_nav">
+                    <div class="site_nav_wrap">
+                        <ul class="site_nav sm sm-base">
+<li><a href="../../" class="nav__item">Home</a></li>
+            <li><a href="../../about/" class="nav__item">About</a></li>
+            <li><a href="../../blog/" class="nav__item">Blog</a></li>
+            <li><a href="../../resume/" class="nav__item">Resume</a></li>
+            <li><a href="../../publications/" class="nav__item">Publications</a></li>
+            <li><a href="../../talks/" class="nav__item">Talks</a></li>
+            <li><a href="../../galleries/" class="nav__item">Photography</a></li>
+            <li><a href="https://github.com/hrmyd/" class="nav__item">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/hrnmy/" class="nav__item">LinkedIn</a></li>
+
+                            
+                        </ul>
+<div class="clear clear_nav_inline_end"></div>
+                    </div>
+                </div>
+                <div class="clear clear_nav_end"></div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <div class="pure-g">
+            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">
+                <div class="content_container">
+                    <!--Body content-->
+                    <div class="row">
+                        
+                        
+<div class="post post-page">
+    <h1 class="post-title">Adventures in Web Apps - Pt 1</h1>
+    <div class="post-meta">2020-04-17</div>
+    <div class="post-content">
+        <div>
+<p>With quarantines and lay offs, I thought this would be a great time to take my little tic tac toe project to a real live app! Since playing in a jupyter notebook isn't nearly as fun as attempting to use my dog's head for one of the player symbols :)</p>
+<p>This is mostly a brain dump/walk through my process and go over some decisions I made along the way.</p>
+<!-- TEASER_END -->
+
+<p>This whole thing started with wanting to play around with Flask and JavaScript. This little adventure ended when my Flask app turned into an API and I figured, "hey, let's just use FastAPI and install less things". Also, as it is a framework already designed for API's that helped as well.</p>
+<p>For the JavaScript part, I figured Vue was the way to go. Keeping it simple and being totally ok with VueJS being ~magic~. I do use Python after all ;)</p>
+<h4>Getting Up and Running</h4>
+<p>First things first, get a backend up and running! Gonna admit I had some issues with getting this part up and working. Structuring projects is a weak point for me and something I was trying to make sure went relatively decent here. I ended up going with the following tree structure:</p>
+<pre class="code literal-block"><span></span><span class="p">.</span>
+<span class="err">├──</span> <span class="n">app</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">bot</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">game</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">agent</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">gameboard</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">player</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">tests</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">utils</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">files</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">└──</span> <span class="n">play</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">models</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="mi">3</span><span class="n">x3_bot</span><span class="p">.</span><span class="n">pkl</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">scripts</span>
+<span class="err">│</span>       <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>       <span class="err">└──</span> <span class="n">train_deploy_model</span><span class="p">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">Dockerfile</span>
+<span class="err">├──</span> <span class="n">Makefile</span>
+<span class="err">└──</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</pre>
+
+
+<p>The script there is run right in the <code>backend</code> folder so the <code>3x3_bot.pkl</code> will get updated. I just ran this before building the docker image as I figured this wasn't really something where I had to worry about updating the model manually as ideally it'll be learning as people interact with the model</p>
+<p>Even though this is a pretty small, low effort app I wanted it to involve all the different deployment steps anyways. Initially I started on GCP. Only problem there was I started blowing through my credits pretty quickly... So, ended up deciding to switch over to Heroku instead. Getting the continuous integration and docker container all set up was definitely super easy! and honestly, easier than I thought it would be, but isn't that always how these things go?</p>
+<h5>API</h5>
+<p>The meat of the backend is the API that interacts with the python gameboard object. The great thing about FastAPI is how easy it is to 1) set up and 2) the use of python typing and pydantic models.</p>
+<p>As an example, these are the models for the request/response bodies that are expected:</p>
+<pre class="code literal-block"><span></span><span class="k">class</span> <span class="n">BoardInit</span>(<span class="n">BaseModel</span>):
+    <span class="n">rows:</span> <span class="nb">int</span>
+    <span class="n">cols:</span> <span class="nb">int</span>
+    <span class="n">score:</span> <span class="nb">int</span>
+
+
+<span class="k">class</span> <span class="n">PlayerMoves</span>(<span class="n">BaseModel</span>):
+    <span class="n">row:</span> <span class="nb">int</span>
+    <span class="n">col:</span> <span class="nb">int</span>
+
+
+<span class="k">class</span> <span class="n">PlayerResponse</span>(<span class="n">BaseModel</span>):
+    <span class="n">win:</span> <span class="nb">bool</span>
+    <span class="n">winner:</span> <span class="nb">int</span>
+
+
+<span class="k">class</span> <span class="n">BotResponse</span>(<span class="n">BaseModel</span>):
+    <span class="n">win:</span> <span class="nb">bool</span>
+    <span class="n">winner:</span> <span class="nb">int</span>
+    <span class="n">row:</span> <span class="nb">int</span>
+    <span class="n">col:</span> <span class="nb">int</span>
+</pre>
+
+
+<p>The other great thing, is the automatically populated OpenAPI docs with that snazzy Swagger UI. I personally ended up setting my default docs with ReDoc as I liked how they looked, but you've got a couple options. Take a peak:</p>
+<p><img alt="alt text" src="../../images/app-adventures/docs-screenshot.png" title="ReDoc auto docs"></p>
+<p>You can also interact with the API a bit through them as well! Which you can also <a href="https://tic-tac-toe.hrmyd.me/docs">check out here!</a></p>
+<p>The API itself consists of initializing the gameboard with a <code>game_id</code> associated with that game, get the bots moves, register the players moves, and reset gameboard if same gameboard object is going to be used. I'm sure there's a better way to set up the session but this was where I currently settled on.</p>
+<p>Next steps from here are finally setting up the VueJS frontend and seeing about making the player images a Pepper and my dog Pepper, seeming like a good opportunity to refresh those graphics skills I haven't used in so long.</p>
+</div>
+    </div>
+    <div class="postpromonav">
+        <nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../playing-with-tic-tac-toe/" rel="prev" title="Playing with Tic Tac Toe">Previous post</a>
+            </li>
+        </ul></nav>
+</div>
+    
+    
+
+
+    
+
+</div>
+
+                </div>
+                <!--End of body content-->
+                <div style="clear:both;height:0;"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+
+        <div class=" pure-u-6-24 pure_cell">
+            <div id="sidebar">
+                <div class="widget">
+                    <div id="search_bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Contents © 2020         <a href="mailto:hiranmayi.duvvuri%5BREMOVE%5D@gmail.com">Hiranmayi Duvvuri</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        
+    </div>
+
+    <!--FIXME: put these somewhere                            -->
+    <!--%if len(translations) > 1:-->
+    <!--<li>
+</li>-->
+    <!--%endif-->
+    <!--% if show_sourcelink:-->
+    <!--
+    <li>
+        <a href="/posts/adventures-in-web-apps/index.md" id="sourcelink">Source</a>
+    </li>
+-->
+    <!--%endif-->
+    <link href="../../assets/css/duoshuo.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="../../assets/js/all.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD");
+    </script><!-- end fancy dates -->
+</div>
+</div>
+</body>
+</html>
