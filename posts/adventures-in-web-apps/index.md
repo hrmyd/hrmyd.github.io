@@ -19,7 +19,7 @@ This whole thing started with wanting to play around with Flask and JavaScript. 
 
 For the JavaScript part, I figured Vue was the way to go. Keeping it simple and being totally ok with VueJS being ~magic~. I do use Python after all ;)
 
-### Getting Up and Running
+## Getting Up and Running
 
 First things first, get a backend up and running! Gonna admit I had some issues with getting this part up and working. Structuring projects is a weak point for me and something I was trying to make sure went relatively decent here. I ended up going with the following tree structure:
 
@@ -54,7 +54,7 @@ The script there is run right in the `backend` folder so the `3x3_bot.pkl` will 
 
 Even though this is a pretty small, low effort app I wanted it to involve all the different deployment steps anyways. Initially I started on GCP. Only problem there was I started blowing through my credits pretty quickly... So, ended up deciding to switch over to Heroku instead. Getting the continuous integration and docker container all set up was definitely super easy! and honestly, easier than I thought it would be, but isn't that always how these things go?
 
-#### API
+## API
 
 The meat of the backend is the API that interacts with the python gameboard object. The great thing about FastAPI is how easy it is to 1) set up and 2) the use of python typing and pydantic models.
 
