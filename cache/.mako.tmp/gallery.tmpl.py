@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1587160970.647396
+_modified_time = 1590870973.985522
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/gallery.tmpl'
 _template_uri = 'gallery.tmpl'
@@ -35,26 +35,26 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'ui')._populate(_import_ns, ['bar'])
-        def content():
-            return render_content(context._locals(__M_locals))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        site_has_comments = _import_ns.get('site_has_comments', context.get('site_has_comments', UNDEFINED))
-        photo_array_json = _import_ns.get('photo_array_json', context.get('photo_array_json', UNDEFINED))
-        crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        enable_comments = _import_ns.get('enable_comments', context.get('enable_comments', UNDEFINED))
-        thumbnail_size = _import_ns.get('thumbnail_size', context.get('thumbnail_size', UNDEFINED))
+        comments = _mako_get_namespace(context, 'comments')
+        ui = _mako_get_namespace(context, 'ui')
         permalink = _import_ns.get('permalink', context.get('permalink', UNDEFINED))
         def extra_js():
             return render_extra_js(context._locals(__M_locals))
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
-        ui = _mako_get_namespace(context, 'ui')
+        site_has_comments = _import_ns.get('site_has_comments', context.get('site_has_comments', UNDEFINED))
         parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
+        photo_array_json = _import_ns.get('photo_array_json', context.get('photo_array_json', UNDEFINED))
         folders = _import_ns.get('folders', context.get('folders', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
+        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
-        comments = _mako_get_namespace(context, 'comments')
+        enable_comments = _import_ns.get('enable_comments', context.get('enable_comments', UNDEFINED))
+        def content():
+            return render_content(context._locals(__M_locals))
+        thumbnail_size = _import_ns.get('thumbnail_size', context.get('thumbnail_size', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -102,17 +102,17 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'ui')._populate(_import_ns, ['bar'])
+        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        ui = _mako_get_namespace(context, 'ui')
+        permalink = _import_ns.get('permalink', context.get('permalink', UNDEFINED))
+        comments = _mako_get_namespace(context, 'comments')
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        enable_comments = _import_ns.get('enable_comments', context.get('enable_comments', UNDEFINED))
+        site_has_comments = _import_ns.get('site_has_comments', context.get('site_has_comments', UNDEFINED))
         def content():
             return render_content(context)
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
-        site_has_comments = _import_ns.get('site_has_comments', context.get('site_has_comments', UNDEFINED))
-        ui = _mako_get_namespace(context, 'ui')
-        crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
         folders = _import_ns.get('folders', context.get('folders', UNDEFINED))
-        comments = _mako_get_namespace(context, 'comments')
-        enable_comments = _import_ns.get('enable_comments', context.get('enable_comments', UNDEFINED))
-        permalink = _import_ns.get('permalink', context.get('permalink', UNDEFINED))
+        crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(ui.bar(crumbs)))

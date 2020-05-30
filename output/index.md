@@ -13,5 +13,13 @@ Welcome to my website! This a little bit of my portfolio website/sharing some of
 
 # Projects
 
-Check out some of the projects I've worked on!
+Check out some of the projects I've worked (/working) on!
 
+## tech projects
+<a href="https://tic-tac-toe.hrmyd.me" target="_blank"><img src="/images/projects/tictactoe.png" width="200"></a> <a href="https://github.com/harmslab/pytc" target="_blank"><img src="/images/projects/pytc.png" width="200"></a> 
+
+## non-tech projects
+
+As someone who greatly enjoys non-tech hobbies as well, I always love showing those off! 
+
+<a href="https://www.instagram.com/hermknits/" target="_blank"><img src="/images/projects/knitting.png" width="200"></a>
