@@ -68,5 +68,5 @@ Super basic HTML and CSS ¯\\\_(ツ)_/¯
 *focus on chemistry, molecular biology, computer science*
 
 currently working towards filling CS gaps with university courses.  
-    **In progress:** Discrete Math @ OSU  
+:   **In progress:** Discrete Math @ OSU  
     **Planned (Fall 2020):** Data Structures and Algorithms  
