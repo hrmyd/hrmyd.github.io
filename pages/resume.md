@@ -45,14 +45,13 @@ In my most recent position, I was a **Data Scientist** at Vacasa where I was the
 
 :   Performing bioinformatics and programming work to help build out tools for data analysis.
 
-
-<h1 class="resume">Work Projects</h1>
-TO DO
-
 <h1 class="resume">Skillset</h1>
+
 **Programming**
 :   Python, SQL, Git, Bash  
 Super basic HTML and CSS ¯\\\_(ツ)_/¯ 
+
+Familiar With: Java, R, C++
 
 **Data Science**
 :   Pandas/GeoPandas, Dask, NumPy, Sci-kit Learn, Keras, OpenCV
@@ -68,3 +67,7 @@ Super basic HTML and CSS ¯\\\_(ツ)_/¯
     </span>
 </p>
 *focus on chemistry, molecular biology, computer science*
+
+currently working towards filling CS gaps with university courses.  
+    **In progress:** Discrete Math @ OSU  
+    **Planned (Fall 2020):** Data Structures and Algorithms  
