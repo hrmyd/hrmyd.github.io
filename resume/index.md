@@ -49,9 +49,8 @@ In my most recent position, I was a **Data Scientist** at Vacasa where I was the
 
 **Programming**
 :   Python, SQL, Git, Bash  
-Super basic HTML and CSS ¯\\\_(ツ)_/¯ 
-
-Familiar With: Java, R, C++
+Super basic HTML and CSS ¯\\\_(ツ)_/¯  
+**Familiar With:** Java, R, C++
 
 **Data Science**
 :   Pandas/GeoPandas, Dask, NumPy, Sci-kit Learn, Keras, OpenCV
