@@ -22,4 +22,4 @@ Check out some of the projects I've worked (/working) on!
 
 As someone who greatly enjoys non-tech hobbies as well, I always love showing those off! 
 
-<a href="https://www.instagram.com/hermknits/" target="_blank"><img src="/images/projects/knitting.png" width="100"></a>
+<a href="https://www.instagram.com/herm.makes/" target="_blank"><img src="/images/projects/knitting.png" width="100"></a>
